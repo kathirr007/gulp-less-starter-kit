@@ -1,0 +1,53 @@
+{
+  "name": "kathirr007",
+  "title": "Getting start Gulp Workflow for Front end Dev using Gulp.js, LESS, SCSS",
+  "author": "kathirr007",
+  "url": "",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "prebuild": "cross-env NODE_ENV=production gulp clean",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "heroku-postbuild": "npm run build",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kathirr007/gulp-less-starter-kit"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-filter": "^7.0.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-if": "^3.0.0",
+    "gulp-image": "^6.2.1",
+    "gulp-less": "^5.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-preprocess": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

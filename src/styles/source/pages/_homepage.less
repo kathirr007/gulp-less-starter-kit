@@ -50,12 +50,28 @@
 
   .banner-slide {
     min-height: 40vw;
+    // max-height: 45vw;
     position: relative;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+    .slide-content-wrapper {
+      padding: 50px 15px;
+      @media (min-width: (@screen__m)) {
+        padding: 30px;
+      }
+    }
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
 
     a {
       color: inherit;
@@ -68,11 +84,14 @@
       left: 0;
       right: 0;
       bottom: 0;
+    }
+    picture {
       z-index: -1;
 
       img {
         width: 100%;
         height: auto;
+        object-fit: cover;
       }
     }
 
@@ -81,8 +100,11 @@
       color: #fff;
       border-color: #333;
       font-size: 16px;
-      margin: 10px 0 0;
+      margin: 20rem 0 0;
       padding: 12px 20px;
+      @media (min-width: (@screen__m)) {
+        margin: 10px 0 0;
+      }
     }
   }
 
@@ -92,20 +114,23 @@
     cursor: pointer;
     border: 1px solid #54575a;
     border-radius: 2rem;
-    padding: 0 10px;
+    padding: 0 5px;
+    margin: 5px 0;
     font-size: 0rem;
     color: #000;
     background-color: #fff;
-    opacity: .8
+    opacity: .8;
+
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+      font-size: 1.4rem;
+     }
+     @media screen and (min-width: (@screen__m)) {
+       padding: 0 10px;
+       [class^="icon-"]:before, [class*=" icon-"]:before {
+         font-size: 2.4rem;
+        }
+     }
   }
-
-  // .icon-play:before {
-  //   content: '\e800'
-  // }
-
-  // .icon-pause:before {
-  //   content: '\e801'
-  // }
 }
 
 
@@ -354,7 +379,7 @@
 }
 
 
-@media only screen and (max-width: (@screen__m - 1)) {
+@media (max-width: (@screen__m - 1)) {
   .cms-hbft-homepage {
     .hbft-cookie-banner {
       height: 126px !important;
@@ -371,7 +396,7 @@
 .slide-text-shadow {
   h1 {
     span {
-      text-shadow: 2px 2px 3px #333;
+      text-shadow: 1px 1px 2px #333;
     }
   }
 }

@@ -114,39 +114,13 @@
               autoplaytime = window.autoplaytime
             }
             let sliderEl = $(".banner-slider");
-            /* let {
-              showDots,
-              infiniteLoop,
-              autoplay,
-              autoplaySpeed,
-              showArrows,
-              fade,
-            } = sliderEl.data();
 
-            if ($(sliderEl).hasClass('slick-initialized')) {
-              sliderEl.slick("unslick");
-            }
-            sliderEl.slick({
-              dots: showDots,
-              infinite: infiniteLoop,
-              autoplay: autoplay,
-              autoplaySpeed: autoplaySpeed,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              draggable: true,
-              pauseOnFocus: false,
-              pauseOnHover: false,
-              arrows: showArrows,
-              adaptiveHeight: true,
-              fade,
-            }); */
-
-            $('.banner-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderEl.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
               $('video').each(function () {
                 $(this).get(0).pause()
               })
             })
-            $('.banner-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            sliderEl.on('afterChange', function (event, slick, currentSlide, nextSlide) {
               if ($('.slick-slide.slick-current').find('video').length !== 0) {
                 $('.banner-slider .video-wrapper.slick-active video')[0].play()
               }
@@ -164,7 +138,7 @@
               }
             })
 
-            $('.banner-slider').slick({
+            sliderEl.slick({
               dots: true,
               infinite: true,
               autoplay: true,

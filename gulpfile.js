@@ -16,16 +16,16 @@ let devBuild =
   dest = devBuild ? 'app/' : 'dist/',
   lessStyles = {
     in: [
-      source + 'styles/**/theme-hbftextiles.less',
-      // source + 'styles/**/lib/*.less'
+      source + 'css/**/theme-hbftextiles.less',
+      // source + 'css/**/lib/*.less'
     ],
-    libs: [source + 'styles/**/lib/*.less']
+    libs: [source + 'css/**/lib/*.less']
   };
-styles = {
+css = {
     in: [
-      source + 'styles/**/*.+(css|scss|sass)',
-      // source + 'styles/**/theme-hbftextiles.less',
-      // source + 'styles/**/lib/*.less'
+      source + 'css/**/*.+(css|scss|sass)',
+      // source + 'css/**/theme-hbftextiles.less',
+      // source + 'css/**/lib/*.less'
     ],
     sassOpts: {
       outputStyle: devBuild ? 'expanded' : 'compressed',
@@ -46,7 +46,7 @@ styles = {
   },
   images = {
     in: source + 'images/**',
-    out: dest + 'assets/images'
+    out: dest + 'images'
   }
 
 // Clean tasks
@@ -209,7 +209,7 @@ gulp.task(
     })
     return (
       gulp
-      .src(styles.in, {
+      .src(css.in, {
         allowEmpty: true
       })
       .pipe(lessFilter)
@@ -314,7 +314,7 @@ gulp.task(
   'watch',
   gulp.parallel('browser-sync', () => {
     gulp
-      .watch(['src/styles/**/*.(css|scss|sass|less)'])
+      .watch(['src/css/**/*.(css|scss|sass|less)'])
       .on('change', gulp.series('styles'))
     gulp.watch('src/js/*.js').on('change', gulp.series('js', reload))
     gulp.watch(html.watch).on('change', gulp.series('html', reload))

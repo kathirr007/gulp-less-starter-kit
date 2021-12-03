@@ -1,0 +1,105 @@
+// terms of sale page
+// @counter-style lower-alpha {
+//     system: alphabetic;
+//     symbols: 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm' 'n' 'o' 'p' 'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z';
+//     prefix:"(";
+//     suffix:")  ";
+// }
+.content-terms-of-sale ol {
+    li{
+        &::marker {
+            font-size:16px;
+        }
+        // ol {
+        //     li{
+        //         list-style-type: lower-alpha;
+        //     }
+        // }
+    }
+}
+
+//*********** Corporate Social Responsibility Start *********//
+.cms-corporate-social-responsibility {
+    .social-banner-image {
+        .pagebuilder-overlay.pagebuilder-poster-overlay {
+            align-items: flex-start;
+            max-width: 1264px;
+            margin: 0 auto
+        }
+        .pagebuilder-banner-wrapper {
+            .pagebuilder-poster-content {
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: (@screen__m - 1)) {
+    .cms-terms-of-use
+    {
+        .terms-of-use-heding
+        {
+            text-align: center;
+        }
+    }
+    .cms-corporate-social-responsibility {
+        .social-banner-image {
+            .pagebuilder-banner-wrapper {
+                .pagebuilder-overlay.pagebuilder-poster-overlay {
+                    min-height: 360px !important;
+                    padding: 10px 22px !important;
+                }
+            }
+        }
+        .social-responsibility-banner-image {
+            .pagebuilder-banner-wrapper {
+                .pagebuilder-overlay.pagebuilder-poster-overlay {
+                    min-height: 360px !important;
+                }
+            }   
+        }
+    }
+    .pagebuilder-column.page-content {
+        padding: 10px 20px !important;
+        .static-page-heading {
+            text-align: center;
+            line-height: 27px;
+            h1 {
+                margin-bottom: 25px !important;
+            }
+        }
+    }
+    
+}
+
+//*********** Corporate Social Responsibility End*********//
+
+@media (min-width: 768px) {
+    .cms-faq-hbft{
+        .faq-content{
+            p{
+                margin-left: 52px;
+            }
+        } 
+    } 
+}
+body.cms-terms-of-use,
+body.cms-privacy-policy,
+body.cms-faq-hbft,
+body.cms-terms-of-sale {
+    font-family: @font-family--primary;
+}
+.pagebuilder-column.page-content {
+    .static-page-heading {
+        h1 {
+            margin-bottom: 15px;
+            font-family: 'NeuzeitS','sans-serif';
+        }
+    }
+    .faq-content h3 {
+        font-family: 'NeuzeitS','sans-serif';
+        margin-bottom: 15px;
+    }
+}

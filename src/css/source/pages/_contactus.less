@@ -1,0 +1,136 @@
+.contact-index-index {
+    .base{
+        display: none;
+    }
+    @media only screen and (min-width: (@screen__m)) {
+        .page-main {
+            padding-left: 0px !important;
+        }
+    }
+    .form.contact{
+        font-size: 14px;
+        font-family: @font-family--primary;
+        color: @color-ivory-black;
+        width: 100% !important;
+        .contact-us-heading {
+            font-weight: 400;
+        }
+        .contact-office-address{
+            padding-left: 5px !important;
+            font-weight: 400;
+        }
+        .contact-office-timings{
+            font-weight: 400;
+        }
+        .fieldset{
+            margin-top: -3rem;
+            margin-left: 10px;
+        }
+        @media only screen and (min-width: (@screen__m)) {
+            .fieldset{
+                margin-left: 1rem;
+            }
+        }
+        @media only screen and (min-width: (@screen__m)) {
+            .fieldset{
+                margin-left: 2.5rem;
+            }
+        }
+        .legend {
+            display: none;
+        }
+        .label{
+            margin-bottom: 0px;
+            font-weight: 900;
+        }
+        .input-text{
+            width: 100%;
+            color: @color-davys-grey;
+            padding: 5px 14px;
+            margin-top: 5px;
+            border: 1px solid @color-platinum-bright;
+            font-weight: 400;
+            font-family: @font-family--primary;
+        }
+            select{
+            width: 100%;
+            padding: 5px 10px;
+            color: @color-ivory-black;
+            margin-top: 5px;
+            border: 1px solid @color-platinum-bright;
+            font-weight: 400;
+            font-family: @font-family--primary;
+        }
+        .field-required{
+            margin: 1rem;
+            padding-bottom: 1rem;
+        }
+        .actions-toolbar{
+            text-align: center;
+            width: 100%;
+            margin-top: 5rem;
+            font-size: 16px;
+            padding: 10px;
+            font-weight: 400;
+            .required-text{
+                color: #8C0000;
+                font-size: 14px;
+                margin-right: 15.5rem;
+                margin-bottom: 4rem;
+                @media only screen and (max-width: (@screen__m - 1)) {
+                    margin-left: 1rem;
+                    float: left;
+                }
+            }
+            .primary{
+                float: none !important;
+                margin: 0 6px;
+            }
+            .action.submit.primary{
+                font-size: 16px;
+                color: @color-white;
+                font-family: @font-family--primary;
+                background: @color-ivory-black;
+                padding: 10px 10rem;
+                font-weight: 400;
+            }
+        }
+        .contact-us-fields{
+            display: flex;
+            width: 75%;
+            @media only screen and (max-width: (@screen__m - 1)) {
+                flex-direction: column;
+                width: 100% !important;
+            }
+            .form-section-primary{
+                width: 50%;
+                @media only screen and (max-width: (@screen__m - 1)) {
+                    width: 100%;
+                }
+            }
+            .form-section-secondary{
+                width: 50%;
+                margin-left: 3rem;
+                .field.comment.required{
+                    margin-top: 2rem;
+                }
+                @media only screen and (max-width: (@screen__m - 1)) {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 4rem;
+                }
+                #comment{
+                    height: 165px;
+                }
+            }
+        }
+        .form-section-third{
+
+            margin-top: 6rem;
+
+        }
+        label span.required-field {
+            color: @color-error;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-let gulp = require('gulp'),
+/* let gulp = require('gulp'),
   $ = require('gulp-load-plugins')({
     lazy: true
   }),
@@ -7,7 +7,20 @@ let gulp = require('gulp'),
   gulpSass = require('gulp-sass')(require('sass')),
   del = require('del'),
   autoprefixer = require('autoprefixer'),
-  Fiber = require('fibers')
+  Fiber = require('fibers') */
+  import { createRequire } from "module";
+
+  import gulp from 'gulp'
+  const gulpLoadPlugins = createRequire(import.meta.url)('gulp-load-plugins');
+  const $ = gulpLoadPlugins({lazy: true});
+  import gulpImage from 'gulp-image';
+  import browserSync from 'browser-sync'
+  import dartSass from 'sass';
+  import gulpSass from 'gulp-sass';
+  const sassCompile = gulpSass( dartSass );
+  import del from 'del'
+  import autoprefixer from 'autoprefixer'
+  import Fiber from 'fibers'
 
 let devBuild =
   (process.env.NODE_ENV || 'development').trim().toLowerCase() !==
@@ -20,7 +33,7 @@ let devBuild =
       // source + 'css/**/lib/*.less'
     ],
     libs: [source + 'css/**/lib/*.less']
-  };
+  },
 css = {
     in: [
       source + 'css/**/*.+(css|scss|sass)',
@@ -73,7 +86,7 @@ gulp.task('images', () => {
     .pipe($.newer(images.out))
     .pipe($.plumber())
     .pipe(
-      $.image({
+      gulpImage({
         jpegRecompress: [
           '--strip',
           '--quality',
@@ -234,10 +247,10 @@ gulp.task(
       )
       .pipe($.if(devBuild, $.sourcemaps.init()))
       .pipe(
-        gulpSass({
+        sassCompile({
           outputStyle: devBuild ? 'expanded' : 'compressed',
           fiber: Fiber
-        }).on('error', gulpSass.logError)
+        }).on('error', sassCompile.logError)
       )
       .pipe(cssFilter.restore)
       .pipe($.autoprefixer('last 4 version'))
@@ -316,8 +329,9 @@ gulp.task(
     gulp
       .watch(['src/css/**/*.(css|scss|sass|less)'])
       .on('change', gulp.series('styles'))
-    gulp.watch('src/js/*.js').on('change', gulp.series('js', reload))
-    gulp.watch(html.watch).on('change', gulp.series('html', reload))
+    gulp.watch('src/js/*.js').on('change', gulp.series('js', browserSync.reload))
+    gulp.watch([`${source}**/*.js`, '!**/*custom.js']).on('change', gulp.series('js-libs', browserSync.reload))
+    gulp.watch(html.watch).on('change', gulp.series('html', browserSync.reload))
   })
 )
 

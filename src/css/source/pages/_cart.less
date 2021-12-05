@@ -1100,11 +1100,49 @@ tr.totals.surcharge.excl{
                     position: absolute;
                 }
                 @media (max-width: 767px){
-                    width: 250px;
+                   display: none;
                 }
             }
         }
     }
+}
+
+.no-background{
+background: none;
+}
+@media (max-width: (@screen__m)) {
+    div#quote-save-action {
+        display: block;
+        position: relative;
+        order: 4;
+        width: 100%;
+        margin: 10px 0px 10px;
+        float: left;
+        .commodity-tooltip {
+            font-size: 1.6rem;
+            font-family: 'NeuzeitS','Open Sans';
+            color: #231f20;
+            margin: 35px 0px 25px;
+            text-align: left;
+            position: absolute;
+            left: -25px;
+            float: left;
+        }
+    }
+    .checkout-cart-index {
+        footer.page-footer {
+            margin-top: 100px;
+        }
+    }
+    .quote-quote-index{
+        #quote-save-action {
+            .commodity-tooltip {
+                margin: 50px 0 25px 0px;
+                left: -17px;
+            }
+        }
+    }
+    
 }
 
 // cart css issue //
@@ -1122,5 +1160,44 @@ tr.totals.surcharge.excl{
             }
         }
     }
+}
+
+@media only screen and (min-width: (@screen__m)) {
+    .checkout-cart-index {
+        .cart-container {
+            .cart.table-wrapper {
+                .cart.items.data.table {
+                    .cart.item {
+                        .item-info {
+                            td.col.qty {
+                                // cart page measurement css
+                                .measurement {
+                                    width: 45px !important;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .checkout-index-index {
+        // checkout page Shipping Method css
+        .charge_comment {
+            .percentage {
+                display: none;
+            }
+            .percentage_text {
+                display: none;
+            }
+            .doller-sign:before {
+                content: '(';
+            }
+            .min_text:after {
+                content: ')';
+            }
+        }
+    }    
 }
 

@@ -41,7 +41,7 @@ footer{
     * {
         box-sizing: border-box;
     }
-    
+
 }
 
 .footer_info {
@@ -54,7 +54,7 @@ footer{
         max-width: 100%;
     }
 
-    .footer_title{
+    .footer_title {
         font-size: 16px;
         line-height: 19px;
         text-transform: uppercase;
@@ -66,6 +66,10 @@ footer{
         margin: 0px 0px 13px;
         font-family: @font-family--primary;
         font-weight: 900;
+        color: @color-ivory-black;
+        a {
+            color: @color-ivory-black;
+        }
 
         @media (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
             font-size: @font-size--milli;
@@ -81,17 +85,18 @@ footer{
     }
 
     .footer_colums{
-        
+
         flex: 0 0 auto;
         position: relative;
         width: 210px;
         padding: 0px 17px 0px 23px;
+        word-break: break-word;
 
         @media (max-width: (@screen__xm - 1)) {
-            width: ~"calc(20% - 10px)";
+            width: ~"calc(25% - 25px)";
             padding: 0px 5px 0px 15px;
         }
-        
+
         @media (max-width: (@screen__m - 1)) {
             width: 100%;
             padding: 0px;
@@ -105,7 +110,7 @@ footer{
             li {
 
                 margin:0px 0px 30px;
-                
+
                 @media (max-width: (@screen__m - 1)){
                     min-height: unset;
                     margin: 0px 0px 32px;
@@ -126,7 +131,7 @@ footer{
                 }
                 a:focus {
                     box-shadow: 0 0 3px 1px #00699d !important;
-               } 
+               }
             }
         }
 
@@ -163,7 +168,7 @@ footer{
         @media (max-width: (@screen__m - 1)) {
             width: 100%;
             padding: 0px;
-               
+
         }
     }
 
@@ -187,7 +192,7 @@ footer{
             border-bottom: 1px solid rgba(68, 68, 68, 0.2);
             margin: 0px 0px 40px;
         }
-        
+
         &:after{
             display: none;
         }
@@ -209,7 +214,7 @@ footer{
             max-width: 240px;
             margin: 0px auto;
             align-items: center;
-        
+
         }
 
         &:after{
@@ -239,7 +244,7 @@ footer{
 
     a {
        line-height: normal;
-        float: left;    
+        float: left;
         display: inline-block;
         vertical-align: top;
 
@@ -348,7 +353,7 @@ footer{
             &:last-child{
                 margin-right: 0px;
             }
-            
+
        }
 
 
@@ -376,7 +381,7 @@ footer{
                     color: #333333;
                     font-family: @font-family--primary;
                 }
-               
+
                 &:first-child{
                     margin-left: 0px;
                 }
@@ -426,7 +431,7 @@ footer{
     }
   }
 
-  
+
 .footer-last {
     flex: 0 0 100%;
     display: flex;

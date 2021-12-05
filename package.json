@@ -5,6 +5,7 @@
   "url": "",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "gulp",
     "prebuild": "cross-env NODE_ENV=production gulp clean",
@@ -32,7 +33,7 @@
     "gulp-filter": "^7.0.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-if": "^3.0.0",
-    "gulp-image": "^6.2.1",
+    "gulp-image": "^6.3.1",
     "gulp-less": "^5.0.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-newer": "^1.4.0",

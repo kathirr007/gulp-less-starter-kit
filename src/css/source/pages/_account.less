@@ -40,8 +40,16 @@
                     display: none;
                 }
             }
-        }
-
+            @media only screen and (min-width: @screen__m) {
+                .table-wrapper.orders-history{
+                    td.col.shipping {
+                        padding-right: 0px !important;
+                        word-wrap: break-word;
+                        word-break: break-word;
+                    }
+                }            
+            }
+        }        
     }
   //******************** Sales Order History Page Css End *********************//
 }
@@ -355,6 +363,18 @@
                   color: @color-ivory-black;
                   font-family: @font-family--secondary;
               }
+          }
+      }
+  }
+
+  .block-dashboard-orders{
+      .block-title{
+          .view{
+            font-weight: 900;
+            font-size: @font-size--base;
+            line-height: 20px;
+            font-family: @font-family--secondary;
+            color: @color-ivory-black;
           }
       }
   }

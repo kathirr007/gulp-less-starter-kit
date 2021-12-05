@@ -713,6 +713,19 @@ div{
 
                             .price-box{
 
+                                .show-plp-sale-price{
+                                    font-size: @font-size--milli;
+                                    font-family: @font-family--secondary;
+                                    font-weight: 900;
+                                    line-height: 17px;
+                                    display: inline-block !important;
+                                }
+
+                                .show-pdp-sale-price{
+                                    
+                                    display: none !important;
+                                }
+
                                 .price{
                                     font-size: @font-size--milli;
                                     line-height: 17px;
@@ -754,7 +767,7 @@ div{
 
                                     & > .old-price {
                                         float: left;
-                                        margin: 0px 5px 0px 0px;
+                                        margin: 0px 0px 0px 0px;
                                     }
 
                                     & > .supplies_text{
@@ -763,10 +776,9 @@ div{
                                     .old-price{
                                         .measurement{
                                             color: black;
-                                            text-decoration: line-through;
                                         }
                                         .price{
-                                            text-decoration: line-through;
+                                            text-decoration: none;
                                         }
                                     }
                                     

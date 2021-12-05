@@ -142,10 +142,10 @@ define(['jquery', 'jquery/ui', 'slick', 'mage/translate'], function ($) {
               showArrows,
               fade,
           } = sliderEl.data();
-            if(sliderEl.hasClass('slick-initialized')) {
+           if(sliderEl.hasClass('slick-initialized')) {
               sliderEl.slick('unslick');
           }
-            sliderEl.slick({
+           sliderEl.slick({
               dots: showDots,
               infinite: infiniteLoop,
               autoplay: autoplay,
@@ -159,7 +159,7 @@ define(['jquery', 'jquery/ui', 'slick', 'mage/translate'], function ($) {
               adaptiveHeight: true,
               fade,
           });
-        }
+       }
   } */
 
 

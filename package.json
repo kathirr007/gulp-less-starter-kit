@@ -10,7 +10,7 @@
     "dev": "gulp",
     "prebuild": "cross-env NODE_ENV=production gulp clean",
     "build": "cross-env NODE_ENV=production gulp build",
-    "heroku-postbuild": "npm run build",
+    // "heroku-postbuild": "npm run build",
     "start": "node index.js"
   },
   "repository": {

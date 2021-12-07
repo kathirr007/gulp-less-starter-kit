@@ -531,8 +531,10 @@
                 line-height: 16px;
                 font-size: @font-size--milli;
                 color: @color-ivory-black;
-                margin-left: 1rem;
                 display: contents;
+                @media only screen and (min-width: (@screen__l)) {
+                    margin-left: 5px;
+                }
             }
         }
     }

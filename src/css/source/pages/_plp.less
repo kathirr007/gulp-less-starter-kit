@@ -731,7 +731,7 @@ div{
                                     line-height: 17px;
                                     font-family: @font-family--secondary;
                                     font-weight: 900;
-                                    margin-right: 5px;
+                                    margin-right: 0px;
                                     float: left;
                                 }
 
@@ -741,7 +741,10 @@ div{
                                     line-height: 17px;
                                     font-family: @font-family--secondary;
                                     font-weight: 900;
-                                    float: left; 
+                                    float: left;
+                                    @media only screen and (min-width: (@screen__l)) {
+                                    margin-left: 5px; 
+                                    }
                                 }
 
                                 .form_text{
@@ -912,7 +915,7 @@ select:not([disabled]):focus {
     @media (max-width: (@screen__m - 1)){
         margin: 0px;
         position: relative;
-        top: 63px;
+        top: 115px;
 
     }
 
@@ -1114,4 +1117,13 @@ select:not([disabled]):focus {
 	.message.info.empty {
 		margin-top: 8%;
 	}
+}
+
+
+.product-item {
+    .product-item-photo{
+        .lead-time-icon {
+            display: none;
+        }
+    }
 }

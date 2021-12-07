@@ -620,6 +620,7 @@
 		height: 52px;
 		width: 274px;
 		text-align: center;
+        display: none;
 	}
 	
 	.table_quote_total {
@@ -1311,8 +1312,17 @@
    }
 }
 }
-
-
-
-	
-	
+@media only screen and (min-width: @screen__m ) and (max-width: (@screen__l - 1 )) {
+	.account {
+		#maincontent {
+			.page-title-1 {
+				margin-left: inherit !important;
+			}
+		}
+	}
+	div#quote-save-action {
+		.commodity-tooltip {
+			margin: 94px 0 25px !important;
+		}
+	}
+}

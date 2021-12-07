@@ -967,6 +967,7 @@
                                 padding-right: 0px !important;
                                 width: auto;
                                 float: right;
+                                text-align: left;
                                 &:before {
                                     display: none;
                                 }
@@ -1055,6 +1056,12 @@
                         }
                     }
                 }
+                .cart-note {
+                    position: initial;
+                    order: 2;
+                    margin-bottom: 20px;
+                    width: 90%;
+                }
             }
             .cart-container{
                 display: flex;
@@ -1107,18 +1114,24 @@ tr.totals.surcharge.excl{
     }
 }
 
+//cart and quote page tooltip 
 .no-background{
 background: none;
 }
-@media (max-width: (@screen__m)) {
+div#quote-save-action {
+    span.commodity-tooltip {
+        display: none;
+    }
+}
+@media (max-width: (@screen__m - 1)) {  
     div#quote-save-action {
-        display: block;
         position: relative;
         order: 4;
         width: 100%;
         margin: 10px 0px 10px;
         float: left;
         .commodity-tooltip {
+            display: block !important;
             font-size: 1.6rem;
             font-family: 'NeuzeitS','Open Sans';
             color: #231f20;

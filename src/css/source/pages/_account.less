@@ -41,11 +41,13 @@
                 }
             }
             @media only screen and (min-width: @screen__m) {
-                .table-wrapper.orders-history{
+                .table-wrapper.orders-history {
                     td.col.shipping {
                         padding-right: 0px !important;
-                        word-wrap: break-word;
-                        word-break: break-word;
+                        .ship-to-firstname,
+                        .ship-to-lastname {
+                            margin-bottom: 0px;
+                        }
                     }
                 }            
             }
@@ -163,7 +165,7 @@
                                     padding: 5px 0px 5px 0;
                                     line-height: 32px;
 
-                                    p.project-name, p.ship-to {
+                                    .project-name, .ship-to {
                                         width: ~"calc(100% - 150px)";
                                         display: inline-block;
                                         margin-bottom: 0px;
@@ -1458,7 +1460,7 @@
           font-weight: 400;
           line-height: 58px;
           margin-bottom: 50px;
-          margin-left: -3.5rem;
+          margin-left: -3.9rem;
       }
 
       .quote_exp_date {
@@ -1725,6 +1727,16 @@
           }
       }
   }
+  // view Quote (Quote summary) Ipad css //
+  &.quote-quote-view {
+    #maincontent {
+        .page-title-1 {
+            @media only screen and (min-width: (@screen__m)) and (max-width: (@screen__l - 1)) {
+              margin-left: 0px; 
+            }
+        }
+    }
+    }
 }
 .account.quote-quote-view #maincontent .quote-items .table tbody .col.qty .field.qty {
     margin-top: 5px;
@@ -1755,6 +1767,7 @@
           margin-bottom: 0px;
           font-size: 32px;
           margin-left: 0px;
+          float: none !important;
         }
         .quote_exp_date {
             padding: 0px;

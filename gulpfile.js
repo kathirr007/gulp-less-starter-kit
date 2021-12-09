@@ -179,6 +179,7 @@
         .src(lessStyles.in, {
           allowEmpty: true
         })
+        .pipe($.if(devBuild, $.sourcemaps.init()))
         .pipe(
           $.less({
             compress: devBuild ? true : true

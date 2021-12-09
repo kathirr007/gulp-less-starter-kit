@@ -122,7 +122,7 @@
       .src(html.in, {
         allowEmpty: true
       })
-      // .pipe($.newer(html.out))
+      .pipe($.newer(html.out))
       .pipe($.preprocess({
         context: html.context
       }))

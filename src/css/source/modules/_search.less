@@ -6,7 +6,7 @@
     line-height: 17px;
     letter-spacing: 0.1585em;
 
-   
+
 
 
     ul {
@@ -27,7 +27,7 @@
 }
 
 div.block-search {
-    top: 100%;  
+    top: 100%;
     position: absolute;
     right:2.1rem;
     width: 317px !important;
@@ -70,7 +70,7 @@ div.block-search {
     &:before {
         content: '\e80d';
         font-size: @font-size--base;
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
     }
 }
 ._keyfocus {
@@ -131,9 +131,9 @@ header.page-header {
                 padding: 0 0px !important;
             }
         }
-            
+
     }
-    
+
     .search-autocomplete {
         position: absolute;
         width: 298px !important;
@@ -142,8 +142,8 @@ header.page-header {
         margin: 0px;
     }
     .icon-search {
-        margin-top: 11px;
-        left: 28px;
+        margin-top: 0px;
+        left: 0px;
     }
     .center-search {
         display: none;
@@ -159,7 +159,7 @@ header.page-header {
             position: absolute;
             left: ~"calc(2% + 4px)";
             z-index: 100;
-            top: 47px;
+            top: 55px;
             width: ~"calc(100% - 43px)";
             margin:0px;
             padding: 0px;
@@ -172,31 +172,72 @@ header.page-header {
                     width: 26px;
                     height: 26px;
                     display: block;
-                    margin-left: 13px;
-                    margin-top: -2.6rem !important;
+                    margin-left: 0px;
+                    margin-top: 0px !important;
                 }
                 &.show-search-icon {
                     &::before{
-                        margin-top: 1.6rem !important;
+                        margin-top: 0px !important;
                     }
                 }
             }
-           
+
             a{
                 float: left;
                 width: 50px !important;
                 height: 50px !important;
+                padding: 12px;
             }
-            .show-search.icon-search-head{
+            .icon-search-head{
+
+
+
                 &::before{
+                    display: none;
                     content: "";
                     background: url(../images/searchmobile.png) no-repeat;
                     width: 26px;
                     height: 26px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                }
+
+
+            }
+            .show-search.icon-search-head{
+                display: block;
+                &::before{
+                    content: "";
                     display: block;
-                    margin-left: 11px;
-                    margin-top: 12px;
-                } 
+
+                    @media (max-width: (@screen__m - 1)) {
+                        display: none;
+                    }
+                }
+
+
+            }
+
+            .show-search.search_box{
+
+                background-color: @color-black;
+
+                &::before{
+
+                    @media (max-width: (@screen__m - 1)) {
+                        content: "";
+                        background: url(../images/searchmobile.png) no-repeat;
+                        width: 26px;
+                        height: 26px;
+                        display: block;
+                        margin-left: 0px;
+                        margin-top: 0px;
+                    }
+                }
+
+                span{
+                    display: none;
+                }
             }
         }
         .page-wrapper {
@@ -213,25 +254,27 @@ header.page-header {
             input {
                 margin: 0px !important;
                 position: fixed !important;
-                width: 81%;
+                width: ~"calc(100% - 58px)";
                 left: 10px;
-                top: 80px;
+                top: 105px;
+                max-width: 333px;
             }
             .search-autocomplete {
                 position: fixed !important;
-                width: 81% !important;
+                width: ~"calc(100% - 53px)" !important;
                 left: 10px;
-                top: 124px;
+                top: 150px;
+                max-width: 333px;
                 ul {
                     display: block !important;
                 }
             }
         }
     }
-    
+
     .nav-open {
         .center-search {
-            top: 30px !important;
+            top: 55px !important;
         }
     }
 }

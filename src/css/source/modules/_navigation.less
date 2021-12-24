@@ -51,14 +51,14 @@
                     content: "";
                     width: 17px;
                     height: 1px;
-                    background: #000;
+                    background: @color-black;
                     display: block;
                 }
             }
             &.has-active>.level-top {
                 border: none;
                 span {
-                    border-color: #231F20;
+                    border-color: @color-ivory-black;
                     border-width: 0 0 1px 0;
                     border-style: solid;
                 }
@@ -66,7 +66,7 @@
             ul.level0.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all.show {
                 display: block!important;
             }
-        }        
+        }
     }
 }
 // Nav Menu css for Desktop End
@@ -114,7 +114,7 @@
             z-index: 999999;
             background-image: url(../images/menu-close-icon.png);
             background-repeat: no-repeat;
-            background-color: #ffffff;
+            background-color: @color-white;
             background-position: 96% top;
             margin-top: 31px;
             display: inline-block;
@@ -127,6 +127,11 @@
         }
         .navigation {
             background: #F8F8F8;
+
+            & > ul{
+                margin-top: 6px;
+            }
+
             .level-top {
 
                 width: 100%;
@@ -136,7 +141,7 @@
                     font-size: @font-size--base;
                     line-height: 1.9rem;
                     letter-spacing: 0.1em;
-                    color: #231F20;
+                    color: @color-ivory-black;
                     font-weight: normal;
                 }
                 &.level0.category-item {
@@ -144,14 +149,19 @@
                     padding: 1.5rem 4rem 1.5rem 2rem !important;
                     background: url(../images/menu-right-icon.png);
                     background-repeat: no-repeat;
-                    background-position: right 20px bottom 13px;
+                    background-position: right 20px bottom 20px;
                 }
                 &.ui-corner-all[aria-label="News + Inspiration"] {
                     padding-left: 0;
                 }
                 .sub-menu-head.mobile-only {
-                    padding-left: 1.7rem;
-                    margin: 2.1rem 0 3.9rem 0;
+                    padding-left: 20px;
+                    margin: 16px 0 3.9rem 0;
+
+                    & + li{
+                        margin-top: 64px;
+                    }
+
                     span.icon-arrow-left {
                         background: url(../images/menu-left-icon.png);
                         background-repeat: no-repeat;
@@ -173,13 +183,18 @@
                     height: 100vh;
                     padding-left: 6px;
                     li.sub-menu-head.mobile-only {
-                        padding-left: 1.7rem;
+                        padding-left: 20px;
                         .icon-close:before {
                             content: '';
                         }
                     }
                     .category-item.ui-menu-item {
-                        padding: 1rem 0rem !important;
+                        padding: 0rem 20px !important;
+
+                        a {
+                            padding: 20px 0px;
+                        }
+
                     }
                     .ui-menu-item.all-category {
                         display: none;
@@ -199,7 +214,7 @@
                     content: "";
                 }
             }
-        } 
+        }
     }
 }
 nav.navigation.test {
@@ -220,7 +235,7 @@ nav.navigation.test {
 	}
 }
 
-@media only screen and (max-width: (@screen__m - 1 )) {   
+@media only screen and (max-width: (@screen__m - 1 )) {
     header {
         .header.content {
         max-width: 1264px !important;
@@ -232,7 +247,7 @@ nav.navigation.test {
 		}
 		.level0 {
 			.submenu {
-				width: 467px !important;
+				width: 100% !important;
 				padding-left: 73% !important;
 			}
 		}
@@ -272,10 +287,27 @@ nav.navigation.test {
     }
 }
 
+@media only screen and (min-width: @screen__m ) and (max-width: 799px) {
+    .nav-sections {
+        .navigation {
+            ul#ui-id-1 {
+                .category-item.level-top {
+                    margin-right: 10px !important;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 992px) {
     .navigation {
         .level0 {
-            margin: 0px 35px 0 0;
+            margin: 0px 40px 0 0 !important;
+        }
+        li.level0.nav-3.category-item.level-top.ui-menu-item {
+            .level-top.ui-corner-all {
+                padding: 0 !important;
+            }
         }
     }
 }
@@ -289,4 +321,25 @@ nav.navigation.test {
 	a {
 		text-transform: capitalize !important;
 	}
+}
+
+
+.pricelists-index-index .submenu li.Price.Lists,
+.performance-index-index .submenu li.Performance.Options,
+.sustainability-index-index .submenu li.Sustainability,
+.sustainability-index-view  .submenu li.Sustainability,
+.pricelists-index-gradedinpartners  .submenu li.Furniture,
+.cms-faq-hbft .submenu li.FAQ,
+.designers-index-index  .submenu li.Designers,
+.designers-index-view .submenu li.Designers,
+.cms-corporate-social-responsibility .submenu li.Corporate.Social,
+.contact-index-index .submenu li.Contact,
+
+
+ {
+  > a{
+    border-color: #ff5501;
+    border-style: solid;
+    border-width: 0 0 0 3px;
+  }
 }

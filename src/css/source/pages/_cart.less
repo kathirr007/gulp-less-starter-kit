@@ -18,6 +18,11 @@
     }
     .cart-container {
         position: relative;
+
+        .form-cart{
+            padding: 0px 48px 0px 0px;
+        }
+
          .cart-discount
         {
             display: none;
@@ -39,7 +44,7 @@
                             border: none;
                             padding-bottom: 13px;
                             padding-top: 0;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             font-size: @font-size--milli;
                             line-height: 17px;
                             letter-spacing: 0.15em;
@@ -93,7 +98,7 @@
                                     }
                                 }
 
-                                
+
                             }
 
                             .actions-toolbar {
@@ -115,7 +120,7 @@
                         }
                         td.col.qty {
                             padding-right: 39px;
-                            
+
                             .measurement {
                                 font-size: 1.4rem;
                                 font-family: @font-family--primary;
@@ -189,7 +194,7 @@
                                         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M13.5918 0.533203C13.4746 0.427734 13.3398 0.375 13.1875 0.375C13.0352 0.375 12.9004 0.427734 12.7832 0.533203L7 6.33398L1.2168 0.533203C1.09961 0.427734 0.964844 0.375 0.8125 0.375C0.660156 0.375 0.525391 0.427734 0.408203 0.533203C0.302734 0.650391 0.25 0.785156 0.25 0.9375C0.25 1.08984 0.302734 1.22461 0.408203 1.3418L6.20898 7.125L0.408203 12.9082C0.302734 13.0254 0.25 13.1602 0.25 13.3125C0.25 13.4648 0.302734 13.5996 0.408203 13.7168C0.466797 13.7637 0.53125 13.8047 0.601562 13.8398C0.671875 13.8633 0.742188 13.875 0.8125 13.875C0.882812 13.875 0.953125 13.8633 1.02344 13.8398C1.09375 13.8047 1.1582 13.7637 1.2168 13.7168L7 7.91602L12.7832 13.7168C12.8418 13.7637 12.9062 13.8047 12.9766 13.8398C13.0469 13.8633 13.1172 13.875 13.1875 13.875C13.2578 13.875 13.3281 13.8633 13.3984 13.8398C13.4688 13.8047 13.5332 13.7637 13.5918 13.7168C13.6973 13.5996 13.75 13.4648 13.75 13.3125C13.75 13.1602 13.6973 13.0254 13.5918 12.9082L7.79102 7.125L13.5918 1.3418C13.6973 1.22461 13.75 1.08984 13.75 0.9375C13.75 0.785156 13.6973 0.650391 13.5918 0.533203Z' fill='%23231F20'/%3E%3C/svg%3E") no-repeat;
                                         width: 14px;
                                         height: 14px;
-                                        
+
                                     }
                                 }
                                 .towishlist.action-towishlist {
@@ -219,7 +224,7 @@
                                         background-repeat: no-repeat;
                                         width: 14px;
                                         height: 14px;
-                                        
+
                                     }
                                 }
                                 .towishlist.action-towishlist {
@@ -236,16 +241,19 @@
         }
         //********** CART ITEM CSS END***********//
         //********** CART SUMMARY CSS START***********//
-        .cart-summary { 
+        .cart-summary {
             background-color: #E5E5E540;
             color: @color-ivory-black;
             padding: 0px 20px;
             position: static;
+            float: none;
+            display: inline-block;
+            vertical-align: top;
 
             .block>.title:after {
                 display: none !important;
             }
-            
+
             .summary.title {
                 font-family: @font-family--primary;
                 font-size: 32px;
@@ -273,7 +281,7 @@
             .block.shipping {
                 .title {
                     font-size: @font-size--milli;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     text-transform: uppercase;
                     font-family: @font-family--secondary;
                     line-height: 17px;
@@ -312,7 +320,7 @@
                     }
 
                     strong{
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                     }
 
                     .block-shipping-heading {
@@ -333,6 +341,7 @@
 
 
                     #co-shipping-method-form {
+                        display: none;
                         .fieldset.rate {
                             .item-title {
                                 font-weight: 400;
@@ -348,13 +357,13 @@
                                         opacity: 1;
                                         top: -2px;
                                         appearance: none;
-                                        position: relative; 
+                                        position: relative;
 
                                         &:checked{
                                             &:before{
                                                 content: "";
                                                 width: 14px;
-                                                height: 14px;  
+                                                height: 14px;
                                                 background: @color-ivory-black;
                                                 border-radius: 50%;
                                                 display: inline-block;
@@ -398,9 +407,9 @@
                         .amount{
                             padding: 0px;
                             border: none !important;
-                            font-weight: 700;
                             font-size: 14px;
-                            font-family: @font-family--primary;
+                            &:extend(.font-weight-heavy);
+                            font-family: @font-family--secondary;
                         }
                     }
 
@@ -420,7 +429,7 @@
                         }
                         .amount {
                             font-size: @font-size--milli;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             line-height: 30px;
                             font-family: @font-family--secondary;
                             padding-top: 10px;
@@ -441,7 +450,7 @@
                         }
                         .amount {
                             font-size: @font-size--milli;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             line-height: 30px;
                             font-family: @font-family--secondary;
                         }
@@ -458,7 +467,7 @@
                         }
                         .amount {
                             font-size: @font-size--milli;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             line-height: 30px;
                             font-family: @font-family--secondary;
                             border: none !important;
@@ -468,7 +477,7 @@
                     .grand.totals {
                         font-size: @font-size--kilo;
                         line-height: 30px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         text-transform: uppercase;
                         font-family: @font-family--secondary;
                         .mark {
@@ -482,7 +491,8 @@
 
                             strong{
                                 padding: 0px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
+                                font-family: @font-family--secondary;
                             }
                         }
 
@@ -628,7 +638,7 @@
             .cutting-text{
                 padding-bottom: 15px;
             }
-            
+
         }
         .cutting-approval {
             input[type="checkbox"] {
@@ -670,10 +680,26 @@
         }
         .cart-note {
             display: block;
-            position: absolute;
-            bottom: 15px;
-            width: 66%;
-            left: 60px;
+            position: static;
+            width: 75%;
+            padding: 0px 48px 0px 80px;
+            float: left;
+            margin: 80px 0px 0px 0px;
+
+            [data-content-type=row][data-appearance=contained]{
+                max-width: 100%;
+                padding: 0px;
+            }
+
+
+
+            p{
+                &:empty{
+                    display: none;
+                }
+
+
+            }
         }
         .cart-activator-description {
             font-weight: normal;
@@ -684,7 +710,7 @@
             font-family: @font-family--primary;
 
             @media only screen and (max-width: (@screen__m - 1)) {
-                padding-bottom: 20px !important; 
+                padding-bottom: 0px !important;
             }
             a {
                 color: @color-ivory-black;
@@ -725,7 +751,7 @@
                 bottom: 0px;
                 left: 0px;
                 right: 0px;
-                font-family: 'NeuzeitS','Open Sans';
+                font-family: @font-family--primary;
                 z-index: 999;
                 background-color: @color-white;
             }
@@ -739,7 +765,7 @@
                     font-family: @font-family--secondary;
                     font-size: @font-size--giga;
                     font-style: normal;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     line-height: 29px;
                     padding-top: 38px;
                     padding-bottom: 22px;
@@ -790,7 +816,7 @@
                             font-weight: 400;
                             line-height: 19px;
                             width: 100%;
-                            height: 52px;  
+                            height: 52px;
                         }
                     }
                 }
@@ -803,7 +829,7 @@
         bottom: 0px;
         left: 0px;
         right: 0px;
-        font-family: 'NeuzeitS','Open Sans';
+        font-family: @font-family--primary;
         z-index: 999;
         background-color: rgba(51,51,51,0.55);
 
@@ -816,7 +842,7 @@
                 font-family: @font-family--secondary;
                 font-size: @font-size--giga;
                 font-style: normal;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 line-height: 29px;
                 padding-bottom: 22px;
             }
@@ -840,7 +866,7 @@
                     line-height: 19px;
                     border: none;
                     padding-top: 1.5rem;
-                    
+
                     a {
                         color: @color-ivory-black;
                     }
@@ -880,15 +906,18 @@
         .cart-container {
             display: flex;
             flex-direction: column;
+
             .cart-summary {
                 -webkit-order: 2;
                 order: 2;
                 margin: 0px 19px 0px 16px;
-                
+
             }
             .form-cart {
                 -webkit-order: 1;
                 order: 1;
+                padding: 0px;
+                margin: 0px 0px 19px 0px;
             }
             .cart.table-wrapper {
                 padding: 0 11px;
@@ -915,10 +944,10 @@
                                     }
                                     .item-options {
                                         margin-top: 0px;
-                                        
+
 
                                         dt {
-                                            font-weight: 900;
+                                            &:extend(.font-weight-heavy);
                                             font-size: @font-size--base;
                                             line-height: 19px;
                                             color: @color-ivory-black;
@@ -952,7 +981,7 @@
                                             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M13.5918 0.533203C13.4746 0.427734 13.3398 0.375 13.1875 0.375C13.0352 0.375 12.9004 0.427734 12.7832 0.533203L7 6.33398L1.2168 0.533203C1.09961 0.427734 0.964844 0.375 0.8125 0.375C0.660156 0.375 0.525391 0.427734 0.408203 0.533203C0.302734 0.650391 0.25 0.785156 0.25 0.9375C0.25 1.08984 0.302734 1.22461 0.408203 1.3418L6.20898 7.125L0.408203 12.9082C0.302734 13.0254 0.25 13.1602 0.25 13.3125C0.25 13.4648 0.302734 13.5996 0.408203 13.7168C0.466797 13.7637 0.53125 13.8047 0.601562 13.8398C0.671875 13.8633 0.742188 13.875 0.8125 13.875C0.882812 13.875 0.953125 13.8633 1.02344 13.8398C1.09375 13.8047 1.1582 13.7637 1.2168 13.7168L7 7.91602L12.7832 13.7168C12.8418 13.7637 12.9062 13.8047 12.9766 13.8398C13.0469 13.8633 13.1172 13.875 13.1875 13.875C13.2578 13.875 13.3281 13.8633 13.3984 13.8398C13.4688 13.8047 13.5332 13.7637 13.5918 13.7168C13.6973 13.5996 13.75 13.4648 13.75 13.3125C13.75 13.1602 13.6973 13.0254 13.5918 12.9082L7.79102 7.125L13.5918 1.3418C13.6973 1.22461 13.75 1.08984 13.75 0.9375C13.75 0.785156 13.6973 0.650391 13.5918 0.533203Z' fill='%23231F20'/%3E%3C/svg%3E") no-repeat;
                                             width: 14px;
                                             height: 14px;
-                                            
+
                                         }
                                     }
                                     .towishlist.action-towishlist {
@@ -977,7 +1006,7 @@
                                 float: left;
                                 width: 100%;
                                 margin: 0px 0px 24px;
-                                
+
 
                                 &::before{
                                     display: none;
@@ -1016,7 +1045,8 @@
                 position: static;
                 width: 100%;
                 order: 2;
-                margin: 10px 0 0 0 !important;
+                margin: 0px 0px 44px !important;
+                padding: 0px 11px;
             }
             [data-content-type=row][data-appearance=contained] {
                 padding: 0 20px;
@@ -1038,9 +1068,12 @@
                 {
                     width:100%;
                     padding-right: 0% !important;
+                    margin-bottom: 19px;
                 }
                 .cart.table-wrapper {
                     margin-left: auto !important;
+                    margin-bottom: 0px;
+
                     .cart.items.data.table {
                         .cart.item {
                             .item-info {
@@ -1051,7 +1084,7 @@
                                         }
                                     }
                                 }
-                                
+
                             }
                         }
                     }
@@ -1059,8 +1092,10 @@
                 .cart-note {
                     position: initial;
                     order: 2;
-                    margin-bottom: 20px;
-                    width: 90%;
+                    margin-bottom: 44px;
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 0px;
                 }
             }
             .cart-container{
@@ -1072,7 +1107,7 @@
                 padding: 1px 8px 25px !important;
             }
         }
-       
+
     }
 
 
@@ -1092,7 +1127,7 @@ tr.totals.surcharge.excl{
                 width: 264px;
                 padding: 5px 12px;
                 font-size: 16px;
-                color: #231F20;
+                color: @color-ivory-black;
                 top: 26px;
                 &:before {
                     border: inset 10px;
@@ -1114,7 +1149,7 @@ tr.totals.surcharge.excl{
     }
 }
 
-//cart and quote page tooltip 
+//cart and quote page tooltip
 .no-background{
 background: none;
 }
@@ -1123,7 +1158,7 @@ div#quote-save-action {
         display: none;
     }
 }
-@media (max-width: (@screen__m - 1)) {  
+@media (max-width: (@screen__m - 1)) {
     div#quote-save-action {
         position: relative;
         order: 4;
@@ -1133,8 +1168,8 @@ div#quote-save-action {
         .commodity-tooltip {
             display: block !important;
             font-size: 1.6rem;
-            font-family: 'NeuzeitS','Open Sans';
-            color: #231f20;
+            font-family: @font-family--primary;
+            color: @color-ivory-black;
             margin: 35px 0px 25px;
             text-align: left;
             position: absolute;
@@ -1155,7 +1190,7 @@ div#quote-save-action {
             }
         }
     }
-    
+
 }
 
 // cart css issue //
@@ -1211,6 +1246,6 @@ div#quote-save-action {
                 content: ')';
             }
         }
-    }    
+    }
 }
 

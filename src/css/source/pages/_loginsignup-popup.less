@@ -16,7 +16,7 @@
             .block {
                 .block-title {
                     border-bottom: none !important;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     font-size: @font-size--tera;
                     line-height: 35px;
                     color: @color-ivory-black;
@@ -79,7 +79,7 @@
                     font-weight: normal;
                     font-size: @font-size--milli;
                     line-height: 17px;
-                    color: #8C0000;
+                    color: @color-error ;
                     margin-bottom: 36px;
                 }
             }

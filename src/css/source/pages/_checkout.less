@@ -1,6 +1,6 @@
 .steps_section{
 
-    background: #FFFFFF;
+    background: @color-white;
     border-bottom: 1px solid rgba(35, 31, 32, 0.25);
     min-height: 86px;
     display: flex;
@@ -19,7 +19,7 @@
     b{
         font-size: @font-size--giga;
         line-height: 29px;
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
         font-family: @font-family--secondary;
         color: @color-ivory-black;
     }
@@ -57,7 +57,7 @@
     .shipping-adddress-title{
         font-size: 1.4rem;
         line-height: 29px;
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
         font-family: @font-family--secondary;
         color: @color-ivory-black;
         border: none;
@@ -90,7 +90,7 @@
                         content: "*";
                         font-size: @font-size--milli;
                         line-height: 17px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family: @font-family--secondary;
                         color: @color-error ;
                         margin: 0 0 0 8px;
@@ -111,7 +111,9 @@
                         padding: 0 20px 0 15px;
                     }
                     input {
-                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                             appearance: none;
                         width: 25px;
                         height: 25px;
                         padding: 0;
@@ -137,7 +139,7 @@
                             display: inline-block;
                             position: absolute;
                             top: 50%;
-                            background: #231f20;
+                            background: @color-ivory-black;
                             border-radius: 50%;
                             transform: translate(-50%,-50%);
                             left: 50%;
@@ -201,12 +203,12 @@
                         }
 
                         button.action {
-                            background: #231F20;
+                            background: @color-ivory-black;
                             font-weight: normal;
                             font-size: 16px;
                             line-height: 19px;
                             text-align: center;
-                            color: #FFFFFF;
+                            color: @color-white;
                             width: 156px;
                             height: 52px;
                             border: none;
@@ -265,7 +267,7 @@
         .step-title{
             font-size: @font-size--giga;
             line-height: 29px;
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
             font-family: @font-family--secondary;
             color: @color-ivory-black;
             border: none;
@@ -287,7 +289,7 @@
                 font-size: @font-size--milli;
                 line-height: 17px;
                 font-family: @font-family--secondary;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 letter-spacing: 0.15em;
                 text-transform: uppercase;
                 margin: 21px 0px 24px;
@@ -367,13 +369,13 @@
                     font-size: @font-size--milli;
                     line-height: 17px;
                     color: @color-ivory-black;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     margin: 19px 0px 5px;
 
                     &:after{
                         font-size: @font-size--milli;
                         line-height: 17px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family: @font-family--secondary;
                         color: @color-error;
                         margin: 0px 0 0 6px;
@@ -392,14 +394,14 @@
                     font-size: @font-size--milli;
                     line-height: 17px;
                     color: @color-ivory-black;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     margin: 19px 0px 5px;
                     display: none;
 
                     &:after{
                         font-size: @font-size--milli;
                         line-height: 17px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family: @font-family--secondary;
                         color: @color-error;
                         margin: 0 0 0 2px;
@@ -518,7 +520,7 @@
                                 background: @color-ivory-black;
                                 font-size: @font-size--base;
                                 line-height: 19px;
-                                color: #fff;
+                                color: @color-white;
                                 font-weight: 400;
                                 border: none;
                                 height: 52px;
@@ -557,7 +559,7 @@
                                 padding: 0px;
                                 border: none;
                                 font-family: @font-family--secondary;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 color: @color-ivory-black;
                                 font-size: @font-size--milli;
                                 line-height: 17px;
@@ -582,7 +584,7 @@
                             font-size: @font-size--milli;
                             line-height: 17px;
                             font-family: @font-family--secondary;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             color: @color-ivory-black;
                             letter-spacing: 0.15em;
                             text-transform: uppercase;
@@ -598,7 +600,7 @@
                             font-size: 1.6rem;
                             line-height: 19px;
                             color: @color-white;
-                            font-family: 'NeuzeitS', 'Open Sans';
+                            font-family: @font-family--primary;
                             border: none;
                             border-radius: 0px;
                             font-weight: normal;
@@ -611,7 +613,7 @@
                             font-size: 1.6rem;
                             line-height: 19px;
                             color: @color-ivory-black;
-                            font-family: 'NeuzeitS', 'Open Sans';
+                            font-family: @font-family--primary;
                             border: none;
                             border-radius: 0px;
                             font-weight: normal;
@@ -804,7 +806,7 @@
                                     margin: 25px 0px;
                                     font-size: @font-size--milli;
                                     line-height: 17px;
-                                    font-weight: 900;
+                                    &:extend(.font-weight-heavy);
                                     font-family: @font-family--secondary;
                                     letter-spacing: 0.15em;
                                     color: @color-ivory-black;
@@ -884,7 +886,7 @@
             .label{
                 font-size: @font-size--milli;
                 line-height: 17px;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 font-family: @font-family--secondary;
                 margin: 0px 0px 5px;
                 color: @color-ivory-black;
@@ -892,7 +894,7 @@
                 &:after{
                     font-size: @font-size--milli;
                     line-height: 17px;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     font-family: @font-family--secondary;
                     color: @color-error;
                     margin: 0px 0px 0px 2px;
@@ -1006,7 +1008,7 @@
             }
 
             select{
-                background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5' fill='none'%3E%3Cpath d='M7.09688 0.219375L4.18688 3.12938L1.27688 0.219375C0.984375 -0.073125 0.511875 -0.073125 0.219375 0.219375C-0.073125 0.511875 -0.073125 0.984375 0.219375 1.27688L3.66188 4.71938C3.95438 5.01188 4.42688 5.01188 4.71938 4.71938L8.16187 1.27688C8.45437 0.984375 8.45437 0.511875 8.16187 0.219375C7.86937 -0.065625 7.38938 -0.073125 7.09688 0.219375Z' fill='%2353565A'/%3E%3C/svg%3E") no-repeat ~"calc(100% - 10px)" center;
+                background: @color-white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5' fill='none'%3E%3Cpath d='M7.09688 0.219375L4.18688 3.12938L1.27688 0.219375C0.984375 -0.073125 0.511875 -0.073125 0.219375 0.219375C-0.073125 0.511875 -0.073125 0.984375 0.219375 1.27688L3.66188 4.71938C3.95438 5.01188 4.42688 5.01188 4.71938 4.71938L8.16187 1.27688C8.45437 0.984375 8.45437 0.511875 8.16187 0.219375C7.86937 -0.065625 7.38938 -0.073125 7.09688 0.219375Z' fill='%2353565A'/%3E%3C/svg%3E") no-repeat ~"calc(100% - 10px)" center;
                 border: 1px solid @color-platinum-bright;
                 font-size: @font-size--milli;
                 line-height: 17px;
@@ -1107,6 +1109,7 @@
                 min-width: unset;
                 width: 100%;
                 margin: 19px 0px 0px;
+                text-indent: 0px;
 
                 .row{
                     display: table-row;
@@ -1139,7 +1142,9 @@
 
                     input{
                         &[type="radio"]{
-                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                                 appearance: none;
                             width: 25px;
                             height: 25px;
                             padding: 0px;
@@ -1168,7 +1173,7 @@
                                 display: inline-block;
                                 position: absolute;
                                 top: 50%;
-                                background: #231f20;
+                                background: @color-ivory-black;
                                 border-radius: 50%;
                                 transform: translate(-50%, -50%);
                                 left: 50%;
@@ -1204,7 +1209,7 @@
                                 line-height: 17px;
                                 font-family: @font-family--secondary;
                                 letter-spacing: normal;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 float: left;
                                 width: 100%;
                             }
@@ -1519,7 +1524,7 @@
                     letter-spacing: 0.15em;
                     text-transform: uppercase;
                     font-family: @font-family--secondary;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     padding: 14.5px 0px 14px;
                     border: none;
 
@@ -1548,6 +1553,14 @@
 
                 tr{
 
+                    &.shipping{
+                        .mark{
+                            span.value{
+                                display: none;
+                            }
+                        }
+                    }
+
 
                     &.sub{
                         .mark{
@@ -1575,7 +1588,7 @@
                         .mark{
                             font-size: @font-size--kilo;
                             line-height: 30px;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             font-family: @font-family--secondary;
                             padding: 10px 0px 15px 0px;
                             text-transform: uppercase;
@@ -1588,7 +1601,7 @@
                         .amount{
                             font-size: @font-size--kilo;
                             line-height: 30px;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             font-family: @font-family--secondary;
                             padding: 10px 0px 15px 0px;
 
@@ -1677,7 +1690,7 @@
                             font-size: @font-size--kilo;
                             line-height: 22px;
                             font-family: @font-family--secondary;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                         }
                     }
 
@@ -1690,7 +1703,7 @@
                             margin: 0px 0px 5px;
 
                             strong{
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-family: @font-family--secondary;
                             }
                         }
@@ -1734,11 +1747,11 @@
                                 display: block !important;
                             }
                             .label {
-                                font-weight: 900;
+                                font-weight: 400 ;
                                 font-size: @font-size--milli;
                                 line-height: 17px;
                                 color: @color-ivory-black;
-                                margin-bottom: 8px !important;
+                                margin-bottom: 5px !important;
                             }
                             .control {
                                 .select {
@@ -1749,89 +1762,94 @@
                                 .label {
                                     &::after {
                                         margin: 0 !important;
+                                        color: @color-error;
                                     }
                                 }
                             }
                             &._required[name="shippingAddress.firstname"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                             }
                             &._required[name="shippingAddress.lastname"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                                 .label {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                                 .control {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                             }
                             &._required[name="shippingAddress.telephone"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                                 vertical-align: top;
                             }
                             &[name="shippingAddress.company"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                                 .label {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                                 .control {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                             }
                             &._required[name="shippingAddress.city"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                             }
                             &._required[name="shippingAddress.region_id"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                                 .label {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                                 .control {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                             }
                             &._required[name="shippingAddress.postcode"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                             }
                             &._required[name="shippingAddress.country_id"] {
-                                width: 50%;
+                                width: 100%;
                                 display: inline-block;
                                 .label {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
                                 .control {
-                                    margin: 0 0 0 1.5rem;
+                                    margin: 0px;
                                     @media only screen and (max-width: (@screen__m - 1)) {
                                         margin: 0 0 0 0;
                                     }
                                 }
+                            }
+
+                            &[name="shippingAddress.street.1"]{
+                                margin: 0px;
                             }
                         }
                     }
@@ -1840,20 +1858,21 @@
             .modal-footer {
                 button.action.primary.action-save-address {
                     float: left;
-                    margin: 0 20px 0 0;
-                    background: #000 !important;
-                    color: #fff !important;
-                    font-weight: 600;
-                    border: none;
-                    padding: 15px !important;
                     width: 100%;
-                    max-width: 332px;
-                    border-radius: 0px !important;
-                    text-transform: uppercase;
-                    font-size: 1.8rem;
-                    height: 59px;
+                    height: 52px;
+                    background: @color-ivory-black;
+                    border: none;
+                    border-radius: 0;
+                    font-size: @font-size--base;
+                    color: @color-white;
+                    box-shadow: none;
+                    margin: 0;
+                    font-family: @font-family--primary;
+                    font-weight: 400;
+                    text-transform: unset;
+
+
                     @media only screen and (max-width: (@screen__m - 1)) {
-                        flex: 0 0 50%;
                         margin: 0 0 0 0 !important;
                     }
                 }
@@ -1861,8 +1880,8 @@
                     float: unset;
                     margin: 0 0 0 7rem !important;
                     background: #000 !important;
-                    color: #fff !important;
-                    font-weight: 600;
+                    color: @color-white !important;
+                    &:extend(.font-weight-heavy);
                     border: none;
                     padding: 15px !important;
                     width: 100%;
@@ -1922,7 +1941,7 @@
             line-height: 42px;
 
             a {
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 font-size: @font-family--secondary;
                 color: @color-ivory-black;
             }
@@ -2015,7 +2034,7 @@
                 width: 324px;
                 max-width: ~"calc(100% - 40px)";
                 box-shadow: none;
-                background: #fff;
+                background: @color-white;
                 height: auto;
                 overflow: auto;
                 margin: 20px auto;
@@ -2036,7 +2055,7 @@
                         line-height: 29px;
                         font-family: @font-family--secondary;
                         color: @color-ivory-black;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         margin: 0px 0px 24px;
                     }
 
@@ -2061,7 +2080,7 @@
                 }
 
                 .modal-footer{
-                    padding: 0px 33px 39px;
+                    padding: 0px 24px 40px;
                     border: none;
                     flex-wrap: wrap;
 
@@ -2092,6 +2111,12 @@
 
                         margin: 0px 0px 25px;
 
+                        .label{
+                            &:after{
+                                margin: 0px;
+                            }
+                        }
+
                         &.choice{
                             display: none;
                         }
@@ -2109,6 +2134,10 @@
                             line-height: 17px;
                             margin: 0px 0px 5px;
                             color: @color-ivory-black;
+
+                            &:after{
+                                color: @color-error;
+                            }
                         }
 
                         .field-tooltip {
@@ -2171,38 +2200,38 @@
 	.grand_total {
 		.mark {
 			strong {
-				font-weight: 900;
+				&:extend(.font-weight-heavy);
 			}
 		}
 	}
 	.amount {
 		strong {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 	.box-order-billing-address {
 		strong {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 	.box-order-shipping-address {
 		strong {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 	.box-order-project-details {
 		strong {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 	.box-content {
 		.title {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 	.info {
 		.title {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 		}
 	}
 }
@@ -2232,7 +2261,7 @@
                 font-size: @font-size--base;
                 line-height: 20px;
                 font-family: @font-family--secondary;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
             }
         }
         .mob_subtotal_qty{
@@ -2260,5 +2289,19 @@
 .opc-estimated-wrapper{
     @media (max-width: (@screen__m - 1)){
         display: none;
+    }
+}
+
+
+div{
+    &.field-error{
+        color: @color-error;
+    }
+}
+div{
+    div{
+        &.mage-error[generated]{
+            color: @color-error;
+        }
     }
 }

@@ -16,6 +16,15 @@
             background: rgba(229, 229, 229, 0.25);
         }
     }
+    .section-header-title-subtitle {
+        .section-header-home {
+            .pagebuilder-column {
+                div {
+                    font-family: @font-family--primary !important;
+                }
+            }
+        }
+    }
 }
 
 .banner-slider {
@@ -57,7 +66,7 @@
 
         li.slick-active {
             button {
-                background: @color-black;
+                background: @color-black;;
                 width: 40px;
             }
         }
@@ -74,16 +83,16 @@
         .slide-content-wrapper {
             padding: 50px 15px;
             width: 100%;
-            
+
             h1 {
                 font-size: @font-size--tera;
                 font-family: @font-family--secondary;
                 color: @color-white;
                 line-height: 48px !important;
-                letter-spacing: -2px;
-                font-weight: 900;
+                letter-spacing: 0px;
+                &:extend(.font-weight-heavy);
             }
-            
+
             @media (min-width: (@screen__m)) {
                 text-align: center;
                 padding: 30px;
@@ -133,7 +142,7 @@
             }
         }
 
-       
+
     }
 
     .icon-wrapper {
@@ -145,7 +154,7 @@
         padding: 0 5px;
         margin: 12px 0;
         font-size: 0rem;
-        color: @color-black;
+        color: @color-black;;
         background-color: @color-white;
         opacity: .8;
 
@@ -227,11 +236,11 @@
             margin: 30px auto;
             .slick-track{
                 display: flex !important;
-                
+
                 .slick-slide {
                     margin: 0 32px 0 0;
                     transition: all ease-in-out .3s;
-                    background: #fff;
+                    background: @color-white;
                     height: inherit !important;
 
                     &:last-child {
@@ -277,7 +286,7 @@
 
             &:hover,
             &:focus {
-                color: #231F20;
+                color: @color-ivory-black;
                 outline: none;
                 background: rgba(229, 229, 229, 0.8);
             }
@@ -294,7 +303,7 @@
 
             &:hover,
             &:focus {
-                color: #231F20;
+                color: @color-ivory-black;
                 outline: none;
                 background: rgba(229, 229, 229, 0.8);
             }
@@ -342,7 +351,7 @@
 
     .cms-hbft-homepage {
         header.page-header {
-            border-bottom: 1px solid #231f20 !important;
+            border-bottom: 1px solid @color-ivory-black !important;
             margin: 0;
         }
 

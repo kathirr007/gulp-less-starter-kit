@@ -29,7 +29,7 @@ footer{
 .footer_container{
     max-width: 1200px;
     margin:0px auto;
-    color: #333333;
+    color: @color-dark-charcoal;
     padding:78px 0px 0px;
     border-top: 0.5px solid rgba(68, 68, 68, 0.2);
 
@@ -64,8 +64,8 @@ footer{
         vertical-align: top;
         min-height: 34px;
         margin: 0px 0px 13px;
-        font-family: @font-family--primary;
-        font-weight: 900;
+        font-family: @font-family--secondary;
+        &:extend(.font-weight-heavy);
         color: @color-ivory-black;
         a {
             color: @color-ivory-black;
@@ -117,11 +117,11 @@ footer{
                 }
 
                 a {
-                    color: #333333;
+                    color: @color-dark-charcoal;
                     font-size: 14px;
                     line-height: 17px;
                     letter-spacing: 0.1em;
-                    color: #333333;
+                    color: @color-dark-charcoal;
                     font-family: @font-family--primary;
 
                     @media (max-width: (@screen__m - 1)){
@@ -343,7 +343,7 @@ footer{
                 line-height: 16px;
                 letter-spacing: 0.08em;
                 text-transform: uppercase;
-                color: #333333;
+                color: @color-dark-charcoal;
                 font-family: @font-family--primary;
             }
             a:focus {
@@ -378,7 +378,7 @@ footer{
                     line-height: 17px;
                     letter-spacing: 0.08em;
                     text-transform: uppercase;
-                    color: #333333;
+                    color: @color-dark-charcoal;
                     font-family: @font-family--primary;
                 }
 
@@ -443,10 +443,10 @@ footer{
     p{
         margin: 0;
         font-size: 14px;
-        font-family: 'NeuzeitS','Open Sans';
+        font-family: @font-family--primary;
         letter-spacing: .08em;
         text-transform: uppercase;
-        color: #333;
+        color: @color-dark-charcoal;
     }
     @media (max-width: (@screen__m - 1)) {
         justify-content: center;

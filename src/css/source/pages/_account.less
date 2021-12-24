@@ -18,7 +18,7 @@
       border: 1px solid @color-platinum-bright;
   }
   input[type="checkbox"]:checked::before {
-      background: @color-black;
+      background: @color-black;;
   }
   input[type="checkbox"]:checked::after {
       content: "";
@@ -35,11 +35,44 @@
     //******************** Sales Order History Page Css Start *********************//
     &.sales-order-history {
         .page-wrapper {
-            .page-main {
-                .page.messages {
-                    display: none;
-                }
+
+            #maincontent{
+                    &.page-main {
+                        .page.messages {
+                            display: none;
+                        }
+
+                        .table{
+                            thead{
+                                tr{
+                                    td{
+
+
+
+                                        &.actions{
+                                            width: 172px;
+                                            white-space: normal;
+                                        }
+                                    }
+
+                                    th{
+                                        min-width: unset;
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                tr {
+                                    td {
+                                        word-break: keep-all;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
             }
+
             @media only screen and (min-width: @screen__m) {
                 .table-wrapper.orders-history {
                     td.col.shipping {
@@ -49,9 +82,9 @@
                             margin-bottom: 0px;
                         }
                     }
-                }            
+                }
             }
-        }        
+        }
     }
   //******************** Sales Order History Page Css End *********************//
 }
@@ -70,7 +103,7 @@
                   .nav.item {
                       display: @show;
                       font-size: @font-size--base;
-                      font-weight: 900;
+                      &:extend(.font-weight-heavy);
                       line-height: 19px;
                       color: @color-ivory-black;
                       font-family: @font-family--secondary;
@@ -105,7 +138,7 @@
                       border-color: @color-ivory-black;
                       background: @color-platinum-bright;
                       strong {
-                          font-weight: 900;
+                          &:extend(.font-weight-heavy);
                       }
                   }
               }
@@ -173,7 +206,7 @@
                                     &:before {
                                         text-align: right;
                                         min-width: 135px;
-                                        font-weight: 900;
+                                        &:extend(.font-weight-heavy);
                                         text-transform: uppercase;
                                         vertical-align: inherit;
                                     }
@@ -181,7 +214,7 @@
                                         text-align: center;
                                         padding: 0px 0 0px 0px !important;
                                         margin: 15px 0 0 0;
-                                        font-weight: 900;
+                                        &:extend(.font-weight-heavy);
                                         .action.view {
                                             padding: 0 10px 0 0;
                                         }
@@ -285,7 +318,7 @@
         }
       .box {
           .box-title span {
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-size: @font-size--kilo;
               line-height: 20px;
               font-family: @font-family--secondary;
@@ -305,7 +338,7 @@
               .action {
                   color: @color-ivory-black;
                   font-size: @font-size--base;
-                  font-weight: 900;
+                  &:extend(.font-weight-heavy);
                   line-height: 20px;
                   text-decoration: underline;
                   font-family: @font-family--secondary;
@@ -337,7 +370,7 @@
       }
       .box {
           .box-title span {
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-size: @font-size--kilo;
               line-height: 20px;
               font-family: @font-family--secondary;
@@ -357,7 +390,7 @@
           }
           .box-actions {
               .action.edit {
-                  font-weight: 900;
+                  &:extend(.font-weight-heavy);
                   font-size: @font-size--base;
                   line-height: 20px;
                   color: @color-ivory-black;
@@ -372,7 +405,7 @@
   .block-dashboard-orders{
       .block-title{
           .view{
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
             font-size: @font-size--base;
             line-height: 20px;
             font-family: @font-family--secondary;
@@ -461,7 +494,7 @@
           .label {
               font-size: @font-size--base;
               line-height: 32px;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-family: @font-family--secondary;
           }
           .control {
@@ -491,7 +524,7 @@
           .label {
               font-size: @font-size--base;
               line-height: 32px;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-family: @font-family--secondary;
           }
           .control {
@@ -530,7 +563,7 @@
       }
       .field.field-choose_role.required {
           .label {
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-size: @font-size--base;
               line-height: 32px;
               font-family: @font-family--secondary;
@@ -588,7 +621,7 @@
           .label {
               font-size: @font-size--base;
               line-height: 32px;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-family: @font-family--secondary;
           }
           .control {
@@ -615,7 +648,7 @@
           .label {
               font-size: @font-size--base;
               line-height: 32px;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-family: @font-family--secondary;
           }
           .control {
@@ -655,7 +688,7 @@
           .label {
               font-size: @font-size--base;
               line-height: 32px;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               font-family: @font-family--secondary;
           }
           .control {
@@ -721,7 +754,7 @@
           .box.box-address-billing {
               .box-title {
                   line-height: 32px;
-                  font-weight: 900;
+                  &:extend(.font-weight-heavy);
                   font-family: @font-family--secondary;
                   span {
                       font-size: @font-size--kilo;
@@ -756,7 +789,7 @@
           .box.box-address-shipping {
               .box-title {
                   line-height: 32px;
-                  font-weight: 900;
+                  &:extend(.font-weight-heavy);
                   font-family: @font-family--secondary;
                   span {
                       font-size: @font-size--kilo;
@@ -794,7 +827,7 @@
           border: none !important;
           strong {
               font-size: @font-size--kilo !important;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               line-height: 32px;
               text-transform: uppercase;
               font-family: @font-family--secondary;
@@ -814,7 +847,7 @@
                         border: none;
                         text-transform: uppercase;
                         font-size: @font-size--kilo;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         line-height: 32px;
                         font-family: @font-family--secondary;
                       }
@@ -918,7 +951,7 @@
               .label {
                   font-size: @font-size--base;
                   line-height: 32px;
-                  font-weight: 900;
+                  &:extend(.font-weight-heavy);
                   font-family: @font-family--secondary;
               }
               .control {
@@ -1035,7 +1068,7 @@
                   th {
                       font-family: @font-family--secondary;
                       font-size: @font-size--kilo;
-                      font-weight: 900;
+                      &:extend(.font-weight-heavy);
                       line-height: 32px;
                       border-bottom: none;
                   }
@@ -1054,7 +1087,7 @@
                   th {
                       font-family: @font-family--secondary;
                       font-size: @font-size--kilo;
-                      font-weight: 900;
+                      &:extend(.font-weight-heavy);
                       line-height: 32px;
                       text-align: left;
                       text-decoration: underline;
@@ -1078,7 +1111,7 @@
                         a {
                           text-decoration: underline;
                           font-family: @font-family--secondary;
-                          font-weight: 900;
+                          &:extend(.font-weight-heavy);
                         }
                       }
                       @media screen and (max-width: (@screen__m - 1)) {
@@ -1150,7 +1183,7 @@
         color: @color-ivory-black;
         font-family: @font-family--secondary;
         font-size: @font-size--milli;
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
         line-height: 17px;
     }
     #maincontent {
@@ -1252,6 +1285,8 @@
                   text-transform: uppercase;
                   min-width: 126px;
 
+
+
                   .cuttingapproval-cfa-index&{
                       padding-right: 67px;
 
@@ -1310,6 +1345,7 @@
                   color: @color-ivory-black;
                   border-top: 1px solid @color-platinum-bright !important;
                   word-break: break-all;
+
 
                   .cuttingapproval-cfa-index&{
                       padding-right: 67px;
@@ -1393,6 +1429,16 @@
 
 
           }
+
+          &.table-order-items{
+              td{
+                  &.actions{
+                      .view{
+                          margin-right: 10px;
+                      }
+                  }
+              }
+          }
       }
   }
 }
@@ -1415,7 +1461,7 @@
           .addressmessage {
             font-family: @font-family--secondary;
             font-size: @font-size--giga;
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
             line-height: 29px;
             margin-bottom: 2.5rem;
           }
@@ -1624,7 +1670,7 @@
                               }
 
                               .availability.in-stock {
-                                  font-weight: 900;
+                                  &:extend(.font-weight-heavy);
                                   font-size: @font-size--milli;
                                   line-height: 17px;
                                   color: @color-midnight-green;
@@ -1683,7 +1729,7 @@
                           td {
                               font-family: @font-family--secondary;
                               font-size: @font-size--milli;
-                              font-weight: 900;
+                              &:extend(.font-weight-heavy);
                               line-height: 30px;
                               padding: 0px 10px;
                           }
@@ -1732,7 +1778,7 @@
     #maincontent {
         .page-title-1 {
             @media only screen and (min-width: (@screen__m)) and (max-width: (@screen__l - 1)) {
-              margin-left: 0px; 
+              margin-left: 0px;
             }
         }
     }
@@ -1785,7 +1831,7 @@
                 vertical-align: top;
                 width: 100%;
                 margin: 47px 0px 0px;
-                border-bottom: 0.5px solid #231f20;
+                border-bottom: 0.5px solid @color-ivory-black;
 
                 .col.item {
                     .product-item-details {
@@ -1901,7 +1947,8 @@
 @media (min-width: 768px), print {
     .account.quote-quote-view, .sales-order-print {
         .logo {
-            max-width: 30% !important;
+            max-width: 25% !important;
+            padding-top: 5rem;
         }
     }
     .account.quote-quote-view {
@@ -1910,6 +1957,32 @@
         }
         .page-header {
             border-bottom: none !important;
+        }
+    }
+    .sales-order-print{
+        .logo {
+            max-width: 25% !important;
+            padding-top: 4rem !important;
+        }
+        .order-details-items.ordered{
+            #my-orders-table{
+                tbody{
+                    td.col.image{
+                        display:block;
+                        img{
+                            height:200px !important;
+                            width:200px !important;
+                        }
+                    }
+                }
+            }
+            .table-order-items-total{
+                tfoot{
+                    td{
+                        text-align:right;
+                    }
+                }
+            }
         }
     }
 }
@@ -2031,7 +2104,7 @@
                     line-height: 32px;
                     color: @color-ivory-black;
                     font-family: @font-family--secondary;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     text-align: center;
                     padding: 0px 5px;
                     display: flex;
@@ -2058,7 +2131,7 @@
                     line-height: 32px;
                     color: @color-ivory-black;
                     font-family: @font-family--secondary;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     text-align: center;
                     border-bottom: 1px solid @color-white;
                     padding: 0px 5px;
@@ -2072,7 +2145,7 @@
                         font-weight: normal;
                         width: 100%;
                         border-color: #C4C4C4;
-                        border-bottom-color: #fff;
+                        border-bottom-color: @color-white;
                     }
                 }
             }
@@ -2152,6 +2225,7 @@
                 tbody{
                     td{
                         padding: 18px 0px 27px 0px;
+                        word-break: keep-all;
 
                         @media (max-width: 1199px){
                             padding-right: 5px;
@@ -2205,15 +2279,225 @@
                         }
 
                         .item-options{
+
+                            span.tag{
+                                float: left;
+                                width: 100%;
+
+                                strong{
+                                    font-size: @font-size--milli;
+                                    font-family:  @font-family--secondary;
+                                    &:extend(.font-weight-heavy);
+                                    padding: 7px 0px 0px;
+                                    line-height: 16px;
+                                    float: left;
+
+                                    @media (max-width: (@screen__m - 1)) {
+                                        font-size: @font-size--base;
+                                    }
+                                }
+
+                                .tag_value{
+                                    font-size: @font-size--milli;
+                                    line-height: 32px;
+                                    margin: 0px 0px 0px 10px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: ~"calc(100% - 50px)";
+
+                                    @media (max-width: (@screen__m - 1)) {
+                                        font-size: @font-size--base;
+                                    }
+                                }
+                            }
+
                             dt{
                                 font-size: @font-size--milli;
                                 font-family:  @font-family--secondary;
-                                font-weight: 900;
-                                padding: 6px 0px 0px;
+                                &:extend(.font-weight-heavy);
+                                padding: 7px 0px 0px;
                                 line-height: 16px;
 
                                 @media (max-width: (@screen__m - 1)){
                                     font-size: @font-size--base;
+                                }
+
+                                @media not all and (min-resolution:.001dpcm) {
+                                    padding: 8px 0px 0px;
+
+                                }
+
+                                @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                    padding: 9px 0px 0px;
+                                }
+
+                                &.Color{
+                                    float: left;
+                                    width: 38px;
+                                    clear: left;
+
+                                    @media(max-width: (@screen__m - 1)){
+                                        width: 43px;
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) {
+                                        width: 44px;
+
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                        width: 49px;
+                                    }
+
+
+
+
+                                    & + dd{
+                                        width: ~"calc(100% - 50px)";
+                                        margin: 0 0 0 10px;
+                                        display: inline-block;
+                                        vertical-align: top;
+
+                                        @media(max-width: (@screen__m - 1)){
+                                            width: ~"calc(100% - 53px)";
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) {
+                                            width: ~"calc(100% - 54px)";
+
+
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                            width: ~"calc(100% - 59px)";
+                                        }
+
+                                    }
+                                }
+
+                                &.Service{
+                                    float: left;
+                                    width: 52px;
+
+                                    @media(max-width: (@screen__m - 1)){
+                                        width: 60px;
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) {
+                                        width: 59px;
+
+                                    }
+
+                                    @media  not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                        width: 66px;
+                                    }
+
+                                    & + dd{
+                                        width: ~"calc(100% - 62px)";
+                                        margin: 0 0 0 10px;
+                                        display: inline-block;
+                                        vertical-align: top;
+
+                                        @media(max-width: (@screen__m - 1)){
+                                            width: ~"calc(100% - 70px)";
+                                        }
+
+
+                                        @media not all and (min-resolution:.001dpcm) {
+                                            width: ~"calc(100% - 69px)";
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                            width: ~"calc(100% - 76px)";
+                                        }
+
+                                    }
+                                }
+
+
+                                &.color{
+                                    float: left;
+                                    width: 38px;
+                                    clear: left;
+                                    text-transform: capitalize;
+
+                                    @media(max-width: (@screen__m - 1)){
+                                        width: 43px;
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) {
+                                        width: 44px;
+
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                        width: 49px;
+                                    }
+
+
+
+
+                                    & + dd{
+                                        width: ~"calc(100% - 50px)";
+                                        margin: 0 0 0 10px;
+                                        display: inline-block;
+                                        vertical-align: top;
+
+                                        @media(max-width: (@screen__m - 1)){
+                                            width: ~"calc(100% - 53px)";
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) {
+                                            width: ~"calc(100% - 54px)";
+
+
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                            width: ~"calc(100% - 59px)";
+                                        }
+
+                                    }
+                                }
+
+                                &.service, &.services{
+                                    float: left;
+                                    width: 52px;
+                                    text-transform: capitalize;
+
+                                    @media(max-width: (@screen__m - 1)){
+                                        width: 60px;
+                                    }
+
+                                    @media not all and (min-resolution:.001dpcm) {
+                                        width: 59px;
+
+                                    }
+
+                                    @media  not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                        width: 66px;
+                                    }
+
+                                    & + dd{
+                                        width: ~"calc(100% - 62px)";
+                                        margin: 0 0 0 10px;
+                                        display: inline-block;
+                                        vertical-align: top;
+
+                                        @media(max-width: (@screen__m - 1)){
+                                            width: ~"calc(100% - 70px)";
+                                        }
+
+
+                                        @media not all and (min-resolution:.001dpcm) {
+                                            width: ~"calc(100% - 69px)";
+                                        }
+
+                                        @media not all and (min-resolution:.001dpcm) and (max-width: (@screen__m - 1)) {
+                                            width: ~"calc(100% - 76px)";
+                                        }
+
+                                    }
                                 }
 
                                 &.date_shipped{
@@ -2229,11 +2513,11 @@
 
                                         @media (max-width: (@screen__xm - 1)){
                                             margin: 0px;
-                                            width: 100%;
+                                            width: ~"calc(100% - 122px)";
                                         }
 
                                         @media (max-width: (@screen__m - 1)){
-                                            width: ~"calc(100% - 122px)";
+                                            width: ~"calc(100% - 135px)";
                                             margin: 0px 0px 0px 10px;
                                         }
 
@@ -2265,7 +2549,7 @@
                                             font-size: @font-size--milli;
                                             line-height: 32px;
                                             font-family:  @font-family--secondary;
-                                            font-weight: 900;
+                                            &:extend(.font-weight-heavy);
                                             color: @color-ivory-black;
                                             text-decoration: underline;
                                         }
@@ -2308,7 +2592,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px 8px;
                                 }
@@ -2335,7 +2619,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px;
                                     margin-right: auto;
@@ -2372,7 +2656,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px;
                                 }
@@ -2386,7 +2670,7 @@
 
                     .price-excluding-tax{
                         line-height: 32px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family:  @font-family--secondary;
                         color: @color-ivory-black;
 
@@ -2469,7 +2753,7 @@
 
                             @media (max-width: (@screen__m - 1)){
                                 width: 185px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-family: @font-family--secondary;
                                 font-size: @font-size--kilo;
                                 line-height: 22px;
@@ -2479,7 +2763,7 @@
 
                                 &:after{
                                     content: ":";
-                                    font-weight: 900;
+                                    &:extend(.font-weight-heavy);
                                     font-family: @font-family--secondary;
                                     font-size: @font-size--kilo;
                                     line-height: 22px;
@@ -2502,7 +2786,7 @@
 
                             @media (max-width: (@screen__m - 1)){
                                 width: ~"calc(100% - 185px)";
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-family: @font-family--secondary;
                                 font-size: @font-size--kilo;
                                 line-height: 22px;
@@ -2547,7 +2831,7 @@
             .box{
                 width: auto;
                 margin: 0px auto;
-                max-width: 149px;
+                max-width: 151px;
 
                 @media (max-width: (@screen__m - 1)){
                     margin: 50px 0px 0px;
@@ -2585,7 +2869,7 @@
                     font-size: @font-size--milli;
                     line-height: 28px;
                     color: @color-ivory-black;
-                    max-width: 149px;
+                    max-width: 100%;
                     margin: 0px;
 
                     @media (max-width: (@screen__m - 1)){
@@ -2605,7 +2889,7 @@
             }
 
             .box-order-shipping-address{
-                max-width: 161px;
+                max-width: 178px;
             }
 
             .box-order-project-details{
@@ -2767,7 +3051,7 @@
                     line-height: 32px;
                     color: @color-ivory-black;
                     font-family: @font-family--secondary;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     text-align: center;
                     padding: 0px 5px;
                     display: flex;
@@ -2794,7 +3078,7 @@
                     line-height: 32px;
                     color: @color-ivory-black;
                     font-family: @font-family--secondary;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     text-align: center;
                     border-bottom: 1px solid @color-white;
                     padding: 0px 5px;
@@ -2808,7 +3092,7 @@
                         font-weight: normal;
                         width: 100%;
                         border-color: #C4C4C4;
-                        border-bottom-color: #fff;
+                        border-bottom-color: @color-white;
                     }
                 }
             }
@@ -2952,7 +3236,7 @@
                             dt{
                                 font-size: @font-size--milli;
                                 font-family:  @font-family--secondary;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 padding: 6px 0px 0px;
                                 line-height: 16px;
 
@@ -3009,7 +3293,7 @@
                                             font-size: @font-size--milli;
                                             line-height: 32px;
                                             font-family:  @font-family--secondary;
-                                            font-weight: 900;
+                                            &:extend(.font-weight-heavy);
                                             color: @color-ivory-black;
                                             text-decoration: underline;
                                         }
@@ -3052,7 +3336,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px 8px;
                                 }
@@ -3079,7 +3363,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px;
                                     margin-right: auto;
@@ -3116,7 +3400,7 @@
                                     font-family: @font-family--secondary;
                                     line-height: 15px;
                                     text-align: right;
-                                    color: @color-black;
+                                    color: @color-black;;
                                     float: left;
                                     padding: 6px 0px 0px;
                                 }
@@ -3130,7 +3414,7 @@
 
                     .price-excluding-tax{
                         line-height: 32px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family:  @font-family--secondary;
                         color: @color-ivory-black;
 
@@ -3212,7 +3496,7 @@
 
                             @media (max-width: (@screen__m - 1)){
                                 width: 185px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-family: @font-family--secondary;
                                 font-size: @font-size--kilo;
                                 line-height: 22px;
@@ -3222,7 +3506,7 @@
 
                                 &:after{
                                     content: ":";
-                                    font-weight: 900;
+                                    &:extend(.font-weight-heavy);
                                     font-family: @font-family--secondary;
                                     font-size: @font-size--kilo;
                                     line-height: 22px;
@@ -3245,7 +3529,7 @@
 
                             @media (max-width: (@screen__m - 1)){
                                 width: ~"calc(100% - 185px)";
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-family: @font-family--secondary;
                                 font-size: @font-size--kilo;
                                 line-height: 22px;
@@ -3290,7 +3574,7 @@
             .box{
                 width: auto;
                 margin: 0px auto;
-                max-width: 149px;
+                max-width: 151px;
 
                 @media (max-width: (@screen__m - 1)){
                     margin: 50px 0px 0px;
@@ -3328,7 +3612,7 @@
                     font-size: @font-size--milli;
                     line-height: 28px;
                     color: @color-ivory-black;
-                    max-width: 149px;
+                    max-width: 100%;
                     margin: 0px;
 
                     @media (max-width: (@screen__m - 1)){
@@ -3348,7 +3632,7 @@
             }
 
             .box-order-shipping-address{
-                max-width: 161px;
+                max-width: 178px;
             }
 
             .box-order-project-details{
@@ -3429,10 +3713,10 @@
             .page-title{
                 font-size: 3.6rem;
                 line-height: 35px;
-                color: #231f20;
+                color: @color-ivory-black;
                 font-weight: 400;
                 margin-bottom: 15px;
-                font-family: 'NeuzeitS', 'Open Sans';
+                font-family: @font-family--primary;
                 letter-spacing: -1px;
                 float: left;
                 margin: 0px 36px 0px 0px;
@@ -3519,7 +3803,7 @@
                             dt{
                                 font-size: @font-size--milli;
                                 font-family:  @font-family--secondary;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 padding: 6px 0px 0px;
                                 line-height: 16px;
 
@@ -3552,7 +3836,7 @@
                                             font-size: @font-size--milli;
                                             line-height: 32px;
                                             font-family:  @font-family--secondary;
-                                            font-weight: 900;
+                                            &:extend(.font-weight-heavy);
                                             color: @color-ivory-black;
                                             text-decoration: underline;
                                         }
@@ -3575,7 +3859,7 @@
 
                     .price-excluding-tax{
                         line-height: 32px;
-                        font-weight: 900;
+                        &:extend(.font-weight-heavy);
                         font-family:  @font-family--secondary;
                         color: @color-ivory-black;
 
@@ -3648,7 +3932,7 @@
             .box{
                 width: auto;
                 margin: 0px auto;
-                max-width: 149px;
+                max-width: 151px;
 
                 &.box-order-billing-address{
                     margin-left: 0px;
@@ -3670,7 +3954,7 @@
                     font-size: @font-size--milli;
                     line-height: 28px;
                     color: @color-ivory-black;
-                    max-width: 149px;
+                    max-width: 100%;
                     margin: 0px;
 
                     strong{
@@ -3686,7 +3970,7 @@
             }
 
             .box-order-shipping-address{
-                max-width: 161px;
+                max-width: 178px;
             }
 
             .box-order-project-details{
@@ -3726,7 +4010,7 @@
         li {
             &:first-child {
                 background: #e5e5e5;
-                border-left: 10px solid #231f20 !important;
+                border-left: 10px solid @color-ivory-black !important;
             }
         }
     }
@@ -3773,7 +4057,7 @@
 			font-size: @font-size--base;
 			font-family: @font-family--secondary;
 			color: @color-ivory-black;
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
 			&:after {
 				content: '*';
 				color: #e02b27;
@@ -3798,7 +4082,7 @@
 	}
 	.action.primary.save {
 		background: @color-ivory-black;
-		border: 1px solid #231F20;
+		border: 1px solid @color-ivory-black;
 		width: 272px !important;
 		height: 52px;
 		span {
@@ -3893,3 +4177,10 @@
     }
 }
 // My order issue fixing end //
+
+
+.account {
+    .message-error{
+        display: none;
+    }
+}

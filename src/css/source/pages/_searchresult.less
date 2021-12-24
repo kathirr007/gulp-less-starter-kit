@@ -9,7 +9,7 @@
                 width: 18px;
                 height: 18px;
                 border-radius: 50%;
-                border: 2px solid #231f20;
+                border: 2px solid @color-ivory-black;
                 opacity: 1;
                 top: 4px;
                 &:checked:before
@@ -17,7 +17,7 @@
                     content: "";
                     width: 8px;
                     height: 8px;
-                    background: #231f20;
+                    background: @color-ivory-black;
                     border-radius: 50%;
                     display: inline-block;
                     position: absolute;
@@ -25,15 +25,15 @@
                     top: 50%;
                     transform: translate(-50%, -50%);
                 }
-                
+
             }
             input{
                 &:checked:after
                 {
-                    content:none !important; 
+                    content:none !important;
                 }
             }
-            
+
         }
     }
     .sidebar-main
@@ -64,7 +64,7 @@
     //                 {
     //                     input[type="checkbox"]:checked:before
     //                     {
-                            
+
     //                     }
     //                 }
     //             }
@@ -202,7 +202,7 @@
                                 background: none;
 
                                 .filter-options-title{
-                                    font-weight: 900;
+                                    &:extend(.font-weight-heavy);
                                     font-family: @font-family--secondary;
                                     line-height: 24px;
                                     color: @color-ivory-black;
@@ -236,7 +236,7 @@
 
                                 &:after{
                                     font-size: 16px;
-                                    font-weight: 900;
+                                    &:extend(.font-weight-heavy);
                                     text-transform: uppercase;
                                     font-family: @font-family--secondary;
                                     line-height: 24px;
@@ -266,7 +266,7 @@
                     padding: 0;
                     line-height: 2.4rem;
                     margin: 0 0 1.6rem;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     color: @color-ivory-black;
                     font-family: @font-family--secondary;
                 }
@@ -279,7 +279,7 @@
 
                             margin: 0px 0px 8px;
 
-                            
+
 
                             .plpfilter_checkbox_box{
                                 display: block;
@@ -292,21 +292,21 @@
                                     height: 18px;
                                     border: 2px solid rgba(0, 0, 0, 0.6);
                                     border-radius: 3px;
-        
+
                                     &:before{
                                         border: none;
                                         width: 14px;
                                         height: 14px;
                                     }
-        
+
                                     &:checked{
                                         &:before{
                                             content: "";
-                                            background: #000;
+                                            background: @color-black;
                                             border: none !important;
                                             border-radius: 0px;
                                         }
-        
+
                                         &:after{
                                             width: 14px;
                                             height: 14px;
@@ -315,9 +315,9 @@
                                             background: url(../images/check_icon.svg) no-repeat center !important;
                                         }
                                     }
-        
-        
-        
+
+
+
                                 }
                             }
                             .checkbox_label{
@@ -364,7 +364,7 @@
                 vertical-align: top;
                 font-size: @font-size--base;
                 padding: 0px;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 line-height: 2.4rem;
                 color: @color-ivory-black;
                 text-transform: uppercase;
@@ -386,7 +386,7 @@
                         font-size: @font-size--base;
                         line-height: 24px;
                         text-decoration-line: underline;
-                        color: #231F20 !important;
+                        color: @color-ivory-black !important;
                     }
                 }
                 .filter-options {
@@ -397,7 +397,7 @@
 
                         &.Color{
                             display: none;
-    
+
                             &.Schemes{
                                 display: block;
                             }
@@ -406,11 +406,11 @@
                         .filter-options-title {
                             line-height: 24px;
                             margin: 0px !important;
-                            font-weight: 900;
+                            &:extend(.font-weight-heavy);
                             text-transform: capitalize;
                             overflow: unset;
-                            color: #231f20;
-                            font-family: 'NeuzeitS-bold','sans-serif';
+                            color: @color-ivory-black;
+                            font-family: @font-family--secondary;
 
                             &.Category {
                                 padding: 0 0 0 0 !important;
@@ -454,26 +454,26 @@
                     display: none;
 
                     @media (max-width: (@screen__m - 1)) {
-                        border: 1px solid #333333;
+                        border: 1px solid @color-dark-charcoal;
                         height: 50px;
                         font-size: 16px;
                         line-height: 19px;
                         letter-spacing: 0.1em;
                         text-transform: uppercase;
-                        color: #333333;
-        
+                        color: @color-dark-charcoal;
+
                         width: ~"calc(100% - 27px)";
                         margin: 16px 8px 57px 19px;
-        
+
                         .filter-active&{
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
                             justify-content: center;
-        
-        
+
+
                         }
-        
+
                     }
                 }
                 .filter-current {
@@ -482,7 +482,7 @@
                             font-weight: normal;
                             font-size: 16px;
                             line-height: 24px;
-                            color: #231F20;
+                            color: @color-ivory-black;
                         }
                         .action.remove {
                             top: 60%;
@@ -527,7 +527,7 @@
                 text-decoration: line-through;
             }
             .supplies_text {
-                font-weight: 700;
+                &:extend(.font-weight-heavy);
                 line-height: 16px;
                 font-size: @font-size--milli;
                 color: @color-ivory-black;
@@ -549,3 +549,36 @@
         }
     }
 }
+
+
+// Search result number for search and plp page css start
+.page-products {
+    .page-wrapper {
+        .number_of_products_mobile {
+            font-size: @font-size--milli;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.15em;
+            color: @color-ivory-black;
+            width: 100%;
+            display: block;
+            margin: 0 0 15px 0;
+        }
+        @media only screen and (max-width: (@screen__m - 1)) {
+            .breadcrumbs {
+                .number_of_products {
+                    display: none;
+                }
+            }
+            .page-title-wrapper {
+                margin: 4px 0 15px !important;
+            }
+        }
+        @media only screen and (min-width: @screen__m) {
+            .number_of_products_mobile {
+                display: none;
+            }
+        }
+    }
+}
+// Search result number for search and plp page css end

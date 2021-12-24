@@ -45,7 +45,7 @@
         .heading
         {
             text-decoration: none;
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
             font-size: @font-size--base;
             color: @color-davys-grey;
             font-family: @font-family--secondary;
@@ -127,7 +127,7 @@
                 display: block;
                 position: absolute;
                 bottom: -18px !important;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 color: @color-davys-grey !important;
                 text-decoration: none;
                 font-style: normal;
@@ -154,7 +154,7 @@
         text-transform: uppercase;
         color: @color-dark-charcoal;
         font-family: @font-family--primary;
-        border: 1px solid #333;
+        border: 1px solid @color-dark-charcoal;
         margin: 47px auto 120px;
         text-decoration: none;
         font-weight: 400;
@@ -206,7 +206,7 @@
         margin-bottom:12px;
         margin-top: 2rem;
         color: @color-davys-grey;
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
         font-family: @font-family--secondary;
     }
     .news-inspiration-subheading
@@ -214,7 +214,7 @@
         margin-top: 0;
         margin-bottom:3rem;
         font-size: @font-size--base;
-        font-weight: 900    ;
+        &:extend(.font-weight-heavy);
         font-style: normal;
         color: @color-davys-grey;
         font-family: @font-family--secondary;
@@ -268,7 +268,7 @@
             color: @color-davys-grey;
             margin-bottom: 2rem;
             display: inline-block;
-            font-family: 'NeuzeitS','Open Sans';
+            font-family: @font-family--primary;
             margin-top: 2rem;
         }
         .links
@@ -280,7 +280,7 @@
                 font-size: 14px;
                 margin-right: 5rem;
                 margin-bottom: 3rem;
-                font-family: 'NeuzeitS-bold','sans-serif';
+                font-family: @font-family--secondary;
                 text-decoration: underline;
             }
         }
@@ -429,7 +429,7 @@
             background: @color-platinum-bright !important;
             .modal-header
             {
-                background-color: #fff;
+                background-color: @color-white;
                 .action-close:before
                 {
                     right: 1.5rem;

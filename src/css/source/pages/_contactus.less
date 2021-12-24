@@ -41,7 +41,7 @@
         }
         .label{
             margin-bottom: 0px;
-            font-weight: 900;
+            &:extend(.font-weight-heavy);
         }
         .input-text{
             width: 100%;
@@ -73,7 +73,7 @@
             padding: 10px;
             font-weight: 400;
             .required-text{
-                color: #8C0000;
+                color: @color-error ;
                 font-size: 14px;
                 margin-right: 15.5rem;
                 margin-bottom: 4rem;

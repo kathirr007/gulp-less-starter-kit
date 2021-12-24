@@ -17,7 +17,7 @@
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 24px;
-                color: #231F20;
+                color: @color-ivory-black;
             }
         }
     }
@@ -27,11 +27,11 @@
     .page-main {
         .page-title-wrapper {
             .page-title {
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 font-size: 36px;
                 line-height: 43px;
                 letter-spacing: -0.03em;
-                color: #53565A;
+                color: @color-davys-grey;
                 margin: 34px 0 51px 0;
             }
         }
@@ -48,13 +48,14 @@
                                 width: 184px;
                                 height: 239px;
                                 display: block;
+                                object-fit: cover;
                             }
                             .price-name {
                                 width: 184px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-size: 16px;
                                 line-height: 19px;
-                                color: #53565A;
+                                color: @color-davys-grey;
                                 margin-top: 15px;
                                 min-height: 38px;
 
@@ -66,7 +67,7 @@
                                 font-weight: normal;
                                 font-size: 14px;
                                 line-height: 28px;
-                                color: #53565A;
+                                color: @color-davys-grey;
                             }
                             .price-pdf-download {
                                 font-style: normal;
@@ -74,7 +75,7 @@
                                 font-size: 14px;
                                 line-height: 28px;
                                 text-decoration-line: underline;
-                                color: #53565A;
+                                color: @color-davys-grey;
                             }
                         }
                     }
@@ -92,10 +93,10 @@
                                 text-transform: unset;
                                 padding: 0;
                                 margin: 0px 1px 15px 13px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-size: 16px;
                                 line-height: 24px;
-                                color: #231F20;
+                                color: @color-ivory-black;
                                 text-transform: uppercase;
                             }
                             .filter-options-content {
@@ -107,7 +108,7 @@
                                         font-weight: normal;
                                         font-size: 16px;
                                         line-height: 24px;
-                                        color: #231F20;
+                                        color: @color-ivory-black;
                                     }
                                 }
                             }
@@ -118,7 +119,7 @@
         }
     }
     .pricelists-index-index {
-        .sidebar-main 
+        .sidebar-main
         {
             div#layered-filter-block{
                 background: rgba(229,229,229,0.25) !important;
@@ -131,10 +132,10 @@
                     text-transform: unset;
                     padding: 0;
                     margin: 0px 0 16px 0;
-                    font-weight: 900;
+                    &:extend(.font-weight-heavy);
                     font-size: 16px;
                     line-height: 24px;
-                    color: #231F20;
+                    color: @color-ivory-black;
                     text-transform: uppercase;
                 }
                 .filter-options
@@ -155,7 +156,7 @@
                             content: "";
                             width: 8px;
                             height: 8px;
-                            background: #231f20;
+                            background: @color-ivory-black;
                             border-radius: 50%;
                             display: inline-block;
                             position: absolute;
@@ -170,7 +171,7 @@
                     width: 18px;
                     height: 18px;
                     border-radius: 50%;
-                    border: 2px solid #231f20;
+                    border: 2px solid @color-ivory-black;
                     opacity: 1;
                     top: 4px;
                     &:focus {
@@ -183,7 +184,7 @@
                         width: 18px;
                         height: 18px;
                         top: 4px;
-                        border: 2px solid #53565A;
+                        border: 2px solid @color-davys-grey;
                         input[type="radio"]
                         {
                             &:checked
@@ -193,7 +194,7 @@
                                     content: "";
                                     width: 8px;
                                     height: 8px;
-                                    background: #231f20;
+                                    background: @color-ivory-black;
                                     border-radius: 50%;
                                     display: inline-block;
                                     position: absolute;
@@ -208,7 +209,7 @@
             }
         }
     }
-    
+
 
 @media only screen and (max-width: (@screen__m - 1))  {
     .pricelists-index-index {
@@ -287,18 +288,18 @@
 		.modal-footer {
 			border-top: none;
 			button {
-				border: 1px solid #333;
+				border: 1px solid @color-dark-charcoal;
 				height: 50px;
 				font-size: @font-size--base;
 				line-height: 19px;
 				text-transform: uppercase;
 				color: @color-dark-charcoal;
-                width: 100%; 
+                width: 100%;
 				margin: 16px 8px 57px 19px;
 			}
 		}
 		.filter-options-title {
-			font-weight: 900;
+			&:extend(.font-weight-heavy);
 			font-family: @font-family--secondary;
 			line-height: 24px;
 			color: @color-ivory-black ;

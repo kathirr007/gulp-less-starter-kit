@@ -7,6 +7,7 @@ define([
 function ($) {
     'use strict'
     $(document).ready(function () {
+        remapUrl();
         cat_title_no_product();
         heroBannerReInit();
         cookieIntegration();
@@ -52,32 +53,23 @@ function ($) {
         $(window).resize(function () {
             serchBox();
         });
-
-        setTimeout(function () {
-            $('#ui-id-1 .level0.nav-3').find('a').attr('href', '/newsinspiration');
-            $('#ui-id-1 li.About').find('a').attr('href', 'https://www.hbftextiles.com/about/abouthbftextiles');
-            $('#ui-id-1 li.About').find('a').attr('target', '_blank');
-            $('#ui-id-1 li.Showrooms').find('a').attr('href', 'https://www.hbftextiles.com/about/showrooms');
-            $('#ui-id-1 li.Showrooms').find('a').attr('target', '_blank');
-            $('#ui-id-1 li.Find.Rep').find('a').attr('href', 'https://www.hbftextiles.com/about/findarep');
-            $('#ui-id-1 li.Find.Rep').find('a').attr('target', '_blank');
-            $('#ui-id-1 li.FAQ').find('a').attr('href', '/faq-hbft');
-            $('#ui-id-1 li.Designers').find('a').attr('href', '/designers');
-            $('#ui-id-1 li.Contact').find('a').attr('href', '/contact');
-            $('#ui-id-1 li.Visit.HBF').find('a').attr('href', 'https://www.hbf.com/');
-            $('#ui-id-1 li.Visit.HBF').find('a').attr('target', '_blank');
-            $('.Sustainability.Certifications').find('a').attr('href', '/sustainability');
-            // $('.Sustainability.Certifications').find('a').attr('target','_blank');
-            $('.Performance.Options.level1').find('a').attr('href', '/performance');
-            // $('.Performance.Options.level1').find('a').attr('target','_blank');
-            $('.Price.Lists.level1.nav-1').find('a').attr('href', '/pricelists');
-            // $('.Price.Lists.level1.nav-1').find('a').attr('target','_blank');
-            $('.Furniture.Partners.level1').find('a').attr('href', '/pricelists/index/furniturepartners');
-            // $('.Furniture.Partners.level1').find('a').attr('target','_blank');
-            $('.Corporate.Social.Responsibility').find('a').attr('href', '/corporate-social-responsibility');
-
-        }, 2000);
     });
+
+    function remapUrl() {
+        $('.Price.Lists.level1.nav-1 a').attr('href', '/pricelists');
+        $('.Performance.Options.level1 a').attr('href', '/performance');
+        $('.Sustainability.Certifications a').attr('href', '/sustainability');
+        $('.Furniture.Partners.level1 a').attr('href', '/pricelists/index/furniturepartners');
+        $('li.FAQ a').attr('href', '/faq-hbft');
+        $('a.level-top[aria-label="News + Inspiration"]').attr('href', '/newsinspiration');
+        $('li.About.Us a').attr({'href': 'https://www.hbftextiles.com/about/abouthbftextiles', 'target':'_blank'});
+        $('li.Designers a').attr('href', '/designers');
+        $('.Corporate.Social.Responsibility a').attr('href', '/corporate-social-responsibility');
+        $('li.Find.a.Rep a').attr({'href': 'https://www.hbftextiles.com/about/findarep', 'target':'_blank'});
+        $('li.Contact a').attr('href', '/contact');
+        $('li.Showrooms a').attr({'href': 'https://www.hbftextiles.com/about/showrooms', 'target':'_blank'});
+        $('li.Visit.HBF a').attr({'href': 'https://www.hbf.com/', 'target':'_blank'});
+    }
 
     function serchBox() {
         if ($(window).width() <= 767) {
@@ -216,7 +208,7 @@ function ($) {
               slidesToScroll: 1,
               draggable: true,
               pauseOnFocus: false,
-              pauseOnHover: false,
+              pauseOnHover: true,
               arrows: false,
               adaptiveHeight: true,
               responsive: [{
@@ -236,7 +228,7 @@ function ($) {
       }
     /* Homepage Banner Slider ends*/
   $(document).on('click', '.mob_subtotal_cart .mob_cart', function (e) {
-	  
+
     $('.opc-sidebar.opc-summary-wrapper').toggleClass('summary_mobile')
   })
 

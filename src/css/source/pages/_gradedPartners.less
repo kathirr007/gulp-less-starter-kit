@@ -8,7 +8,7 @@
                         content: "";
                         width: 8px;
                         height: 8px;
-                        background: #231f20;
+                        background: @color-ivory-black;
                         border-radius: 50%;
                         display: inline-block;
                         position: absolute;
@@ -23,7 +23,7 @@
                 width: 18px;
                 height: 18px;
                 border-radius: 50%;
-                border: 2px solid #231f20;
+                border: 2px solid @color-ivory-black;
                 opacity: 1;
                 top: 4px;
                 &:focus {
@@ -40,11 +40,11 @@
     .page-main {
         .page-title-wrapper {
             .page-title {
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 font-size: 36px;
                 line-height: 43px;
                 letter-spacing: -0.03em;
-                color: #53565A;
+                color: @color-davys-grey;
                 margin: 34px 0 51px 0;
             }
         }
@@ -64,10 +64,10 @@
                             }
                             .graded-in-partners-name {
                                 width: 184px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-size: 16px;
                                 line-height: 19px;
-                                color: #53565A;
+                                color: @color-davys-grey;
                                 margin-top: 15px;
                                 min-height: 38px;
                             }
@@ -75,7 +75,7 @@
                                 font-weight: normal;
                                 font-size: 14px;
                                 line-height: 28px;
-                                color: #53565A;
+                                color: @color-davys-grey;
                             }
                             .price-pdf-download {
                                 font-style: normal;
@@ -83,9 +83,9 @@
                                 font-size: 14px;
                                 line-height: 28px;
                                 text-decoration-line: underline;
-                                color: #53565A;
+                                color: @color-davys-grey;
                             }
-                           
+
                         }
                     }
                 }
@@ -101,10 +101,10 @@
                                 text-transform: unset;
                                 padding: 0;
                                 margin: 0px 1px 15px 13px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-size: 16px;
                                 line-height: 24px;
-                                color: #231F20;
+                                color: @color-ivory-black;
                                 text-transform: uppercase;
                     }
                 }
@@ -116,10 +116,10 @@
                                 text-transform: unset;
                                 padding: 0;
                                 margin: 0px 1px 15px 13px;
-                                font-weight: 900;
+                                &:extend(.font-weight-heavy);
                                 font-size: 16px;
                                 line-height: 24px;
-                                color: #231F20;
+                                color: @color-ivory-black;
                                 text-transform: uppercase;
                             }
                             .filter-options-content {
@@ -131,7 +131,7 @@
                                         font-weight: normal;
                                         font-size: 16px;
                                         line-height: 24px;
-                                        color: #231F20;
+                                        color: @color-ivory-black;
                                     }
                                 }
                             }
@@ -190,22 +190,22 @@
 		.modal-footer {
 			border-top: none;
 			button {
-				border: 1px solid #333;
+				border: 1px solid @color-dark-charcoal;
 				height: 50px;
 				font-size: 16px;
 				line-height: 19px;
 				letter-spacing: 0.1em;
 				text-transform: uppercase;
-				color: #333333;
+				color: @color-dark-charcoal;
 				width: calc(100% - 27px);
 				margin: 16px 8px 57px 19px;
 			}
 		}
 		.filter-options-title {
-			font-weight: 900;
-			font-family: 'NeuzeitS-bold','sans-serif';
+			&:extend(.font-weight-heavy);
+			font-family: @font-family--secondary;
 			line-height: 24px;
-			color: #231f20;
+			color: @color-ivory-black;
 			text-transform: uppercase;
 			margin-bottom: 16px;
 			font-size: 16px !important;

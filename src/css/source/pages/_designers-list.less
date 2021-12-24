@@ -78,7 +78,7 @@
               a {
                 display: block;
               }
-            }        
+            }
         }
     }
 
@@ -150,9 +150,9 @@
         font-size: @font-size--base;
         color: @color-davys-grey;
         margin-top: 10rem;
-        font-weight: 700;
+        &:extend(.font-weight-heavy);
         margin-bottom: 10rem;
-        font-family: 'Neuzeit S LT Std';
+        font-family: @font-family--primary;
         display: flex;
     }
 }
@@ -206,11 +206,11 @@
 
             .page-title {
                 font-family: @font-family--primary;
-                font-weight: 900;
+                &:extend(.font-weight-heavy);
                 font-size: 36px;
                 line-height: 43px;
                 letter-spacing: -0.03em;
-                color: #53565A;
+                color: @color-davys-grey;
                 margin: 28px 0px 67px 4px;
 
             }

@@ -15,12 +15,12 @@
         border: 2px solid @color-ivory-black;
     }
     input[type="checkbox"]:checked::before {
-        background: @color-black;
+        background: @color-black;;
     }
     input[type="checkbox"]:checked::after {
         content: "";
-        border-top: 2px solid #fff;
-        border-right: 2px solid #fff;
+        border-top: 2px solid @color-white;
+        border-right: 2px solid @color-white;
         transform: rotate(135deg);
         display: inline-block;
         position: absolute;
@@ -38,7 +38,7 @@
 			.block-title {
 				font-size: @font-size--tera;
 				line-height: 35px;
-				font-weight: 900;
+				&:extend(.font-weight-heavy);
 				color: @color-ivory-black;
 			}
 		}
@@ -46,7 +46,7 @@
 			.block-title {
 				font-size: @font-size--tera;
 				line-height: 35px;
-				font-weight: 900;
+				&:extend(.font-weight-heavy);
 				color: @color-ivory-black;
 			}
 		}
@@ -58,7 +58,7 @@
 			.block-title {
 				font-size: @font-size--tera;
 				line-height: 35px;
-				font-weight: 900;
+				&:extend(.font-weight-heavy);
 				color: @color-ivory-black;
 			}
 		}
@@ -66,7 +66,7 @@
 			.block-title {
 				font-size: @font-size--tera;
 				line-height: 35px;
-				font-weight: 900;
+				&:extend(.font-weight-heavy);
 				color: @color-ivory-black;
 			}
 		}
@@ -92,7 +92,7 @@
 	#block-customer-login-heading, #block-new-customer-heading  {
 		font-size: @font-size--tera;
 		line-height: 35px;
-		font-weight: 900;
+		&:extend(.font-weight-heavy);
 		color: @color-ivory-black;
         font-family: @font-family--secondary;
 	}
@@ -101,7 +101,7 @@
 			.field.email.required {
 				.label {
 					font-size: @font-size--base;
-					font-weight: 900;
+					&:extend(.font-weight-heavy);
 					line-height: 19px;
 					color: @color-ivory-black;
                     font-family: @font-family--secondary;
@@ -110,7 +110,7 @@
 			.field.password.required {
 				.label {
 					font-size: @font-size--base;
-					font-weight: 900;
+					&:extend(.font-weight-heavy);
 					line-height: 19px;
 					color: @color-ivory-black;
                     font-family: @font-family--secondary;
@@ -252,7 +252,7 @@
 				strong {
 					font-size: @font-size--tera;
 					line-height: 35px;
-					font-weight: 900;
+					&:extend(.font-weight-heavy);
 					color: @color-ivory-black;
 				}
 			}
@@ -278,7 +278,7 @@
 				strong {
 					font-size: @font-size--tera;
 					line-height: 35px;
-					font-weight: 900;
+					&:extend(.font-weight-heavy);
 					color: @color-ivory-black;
 				}
 				border-bottom: none;
@@ -321,12 +321,12 @@
 	.modal-popup{
 		.modal-inner-wrap{
 			margin: 2rem auto !important;
-				
+
 		}
 	}
 }
 
-// Login popup page mobile css  
+// Login popup page mobile css
 @media only screen and (max-width: (@screen__m - 1)) {
 	.catalog-product-view {
 		&._has-modal {

@@ -6,7 +6,7 @@
       .sustainability-list
       {
         a{
-          color: #53565A !important;
+          color: @color-davys-grey !important;
           text-decoration: underline !important;
         }
       }
@@ -24,14 +24,14 @@
        text-transform: uppercase;
        color: @color-dark-charcoal;
        font-family: @font-family--primary;
-       border: 1px solid #333;
+       border: 1px solid @color-dark-charcoal;
        vertical-align: top;
        margin: 65px 0px 66px;
        text-decoration: none;
        background: @color-white ;
        font-weight: normal;
      }
-      
+
       .column.main {
         .container {
           margin-right: 0px !important;
@@ -45,11 +45,11 @@
           width: 100% !important;
         }
       }
-       
+
         .columns {
           padding: 0px !important;
         }
-      
+
       .column {
         .main {
           .container {
@@ -64,7 +64,7 @@
           color: @color-davys-grey;
           font-family: @font-family--secondary;
           font-style: normal;
-          font-weight: 900;
+          &:extend(.font-weight-heavy);
         }
       }
       .sustainability-list {
@@ -90,23 +90,23 @@
         }
       }
       .sustainability-subheading{
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
       }
       .download-pdf{
-        font-weight: 900;
+        &:extend(.font-weight-heavy);
       }
       .sustainability-heading{
         margin-bottom: 12px;
         }
     }
-  
-  
+
+
   .sustainability-index-view {
     .sustainability-view-wrapper {
       .sustainability-view-left {
         margin-right:6rem;
         a{
-          color: #53565A !important;
+          color: @color-davys-grey !important;
         }
         img
         {
@@ -134,7 +134,7 @@
             text-decoration: underline;
             span {
               font-size: 14px !important;
-              font-weight: 900;
+              &:extend(.font-weight-heavy);
               color: @color-davys-grey;
             }
           }
@@ -166,7 +166,7 @@
         margin-top: 5rem;
       }
     }
-    
+
     .sustainability-index-index {
       .sustainability-list {
         .description {
@@ -210,7 +210,7 @@
   {
       font-family:@font-family--secondary;
       font-style: normal;
-      font-weight: 900;
+      &:extend(.font-weight-heavy);
       font-size: @font-size--tera;
       line-height: 43px;
       letter-spacing: -0.03em;
@@ -239,24 +239,19 @@
       font-family: @font-family--secondary;
       font-style: normal;
   }
-  .view-product
+  .view-product, .view-web
   {
       font-size:16px;
       color: @color-davys-grey;
       font-family: @font-family--secondary;
       font-style: normal;
-      font-weight:900;
       text-decoration-line: underline;
+      &:extend(.font-weight-heavy);
+      span {
+          font-family: @font-family--secondary;
+      }
   }
-  .view-web
-  {
-      font-size:16px;
-      color: @color-davys-grey;
-      font-family: @font-family--secondary;
-      font-style: normal;
-      font-weight:900;
-      text-decoration-line: underline;
-  }
+
   @media (min-width: @screen__m) {
   .sustainability-index-index {
     .product-main-page {
@@ -271,6 +266,7 @@
     .view-port-product {
       position: absolute;
       bottom: 19px;
+      white-space: nowrap;
     }
     a.view-product {
       display: block;
